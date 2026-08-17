@@ -1,4 +1,3 @@
-@forward 'ui';
-@forward 'layout';
-@forward 'partials';
-@forward 'widgets';
+@use 'layout';
+@use 'partials';
+@use 'widgets';

@@ -108,7 +108,7 @@ function html() {
                 layouts: srcPath + 'templates/layouts/',
                 defaultLayout: false,
                 partials: [
-                    srcPath + 'templates/partials/',
+                    srcPath + 'templates/core/',
                     srcPath + 'templates/components/',
                 ],
                 helpers: srcPath + 'templates/helpers/',
