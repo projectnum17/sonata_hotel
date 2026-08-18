@@ -1,1 +1,67 @@
-<footer>footer</footer>
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__details">
+                <div class="footer__location">
+                    <p class="footer__title">Ми знаходимось</p>
+                    <p class="footer__info">Morozna Str.14, Львов, <br> 79066, Украина</p>
+                </div>
+                <div class="footer__connects">
+                    <div class="footer__connect">
+                        <p class="footer__title">Бронювання номерів:</p>
+                        <a href="tel:+380320000000" class="footer__info">
+                            +38 (032) XXX XX XX
+                        </a>
+                    </div>
+                    <div class="footer__connect">
+                        <p class="footer__title">Організація подій:</p>
+                        <a href="tel:+380320000000" class="footer__info">
+                            +38 (032) XXX XX XX
+                        </a>
+                    </div>
+                    <div class="footer__connect">
+                        <p class="footer__title">Email</p>
+                        <a href="mailto:info@sonata-hotel.com" class="footer__info">
+                            info@sonata-hotel.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__preview">
+                <div class="footer__logo">
+                    <img src="./assets/images/icons/logo_white.svg" alt="Logotype">
+                </div>
+            </div>
+            <ul class="footer__menu">
+                {{#each menuInfo.footer}}
+                <li>
+                    <a href="javascript: void(0)">{{ title }}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="footer__bot">
+        <div class="container">
+            <div class="footer__copy">
+                <p>
+                    © 2025 Sonata Hotel & Restaurant. Усі права захищені.
+                </p>
+            </div>
+            <div class="footer__legals">
+                <a target="_blank" href="javascript: void(0)">
+                    ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ
+                </a>
+                <a target="_blank" href="javascript: void(0)">
+                    ПУБЛІЧНА ОФЕРТА
+                </a>
+                <a target="_blank" href="javascript: void(0)">
+                    ПРАВИЛА ПРОЖИВАННЯ
+                </a>
+            </div>
+            <div class="footer__by">
+                <a target="_blank" href="javascript: void(0)">DEVELOPED BY ESFIRUM AGENCY</a>
+            </div>
+        </div>
+    </div>
+</footer>

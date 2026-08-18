@@ -7,17 +7,16 @@ html {
 }
 
 body {
+    font-family: $ff_base, $system-ff;
     font-weight: 400;
-    font-size: rem(16px);
-    line-height: 130%;
-    font-family: $system-ff;
+    line-height: 100%;
+    @include fluidRem(font-size, 14px, 18px);
     min-height: 100vh;
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    background: #000;
-    color: #fff;
-    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    background: $bg_body;
+    color: $c_dark;
 
     &.is-locked {
         overflow: hidden;
@@ -26,6 +25,7 @@ body {
 
 main {
     flex: 1;
+    min-height: 50vh;
 }
 
 button {

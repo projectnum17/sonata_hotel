@@ -1,1 +1,56 @@
-<header>header</header>
+<header class="header js-header">
+    <div class="container">
+        <a href="index.html" class="header__logo">
+            <img src="./assets/images/icons/logo_white.svg" alt="Logotype">
+            <img src="./assets/images/icons/logo_dark.svg" alt="Logotype">
+        </a>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                {{#each menuInfo.header}}
+                <li>
+                    <a href="javascript: void(0)">{{ title }}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </nav>
+        <div class="header__panel">
+            <ul class="header__lang">
+                <li class="header__lang-current is-current">
+                    <span class="header__lang-label">UA</span>
+                    <svg>
+                        <use href="./assets/images/icons/svg/sprite.svg#icoDrop"></use>
+                    </svg>
+                </li>
+                <li class="header__lang-inner">
+                    <ul class="header__lang-list">
+                        <li class="header__lang-item header__lang-item--active">
+                            <span class="header__lang-link">
+                                UA
+                            </span>
+                        </li>
+                        <li class="header__lang-item">
+                            <a class="header__lang-link" href="javascript: void(0)">
+                                EN
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="header__calls">
+                <div class="header__calls-preview">
+                    <p>Зателефонувати</p>
+                    <svg>
+                        <use href="./assets/images/icons/svg/sprite.svg#icoDrop"></use>
+                    </svg>
+                </div>
+                <div class="header__calls-collect">
+                    <div class="header__calls-items">
+                        <a href="tel:+380000000000">+38 (000) 000 00 00</a>
+                        <a href="tel:+380000000000">+38 (000) 000 00 00</a>
+                    </div>
+                </div>
+            </div>
+            <a href="javascript: void(0)" class="cta cta--accent">бронювання</a>
+        </div>
+    </div>
+</header>

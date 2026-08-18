@@ -1,0 +1,47 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.cta {
+    position: relative;
+    @include fluidRem(font-size, 14px, 18px);
+    line-height: 100%;
+    font-family: $ff_base;
+    font-weight: 400;
+    text-transform: uppercase;
+    @include fluidRem(padding-block, 11px, 14px);
+    @include fluidRem(padding-inline, 18px, 29px);
+    border-radius: 999px;
+    color: $c_light;
+    background: $gradient_accent;
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+    @include hover {
+        background-position: 100% 50%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        padding: rem(1px);
+        border-radius: inherit;
+        background: $gradient_gold;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    &--dark {
+        background: $gradient_secondary;
+        border: 1px solid #edcc85;
+        &::after {
+            display: none;
+        }
+    }
+}
