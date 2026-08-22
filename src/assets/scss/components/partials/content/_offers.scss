@@ -1,0 +1,21 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.offers {
+    padding-block: var(--section_gap);
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(12px);
+        @include fluidRem(margin-bottom, 24px, 80px);
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        @include fluidRem(gap, 12px, 28px);
+    }
+}

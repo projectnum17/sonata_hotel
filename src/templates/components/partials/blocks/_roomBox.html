@@ -1,0 +1,20 @@
+<a href="javascript: void(0)" class="room-box">
+    <img src="{{ picture }}" alt="">
+    <div class="room-box__content">
+        <div class="room-box__details">
+            <p class="room-box__name">{{ naming }}</p>
+            <ul class="room-box__list">
+                {{#each info}}
+                <li>
+                    {{ title }}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="control-btn control-btn--white control-btn--box">
+        <svg>
+            <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+        </svg>
+    </div>
+</a>

@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "picture": "./assets/images/icons/ben_1.png",
+            "title": "Зелена територія",
+            "text": "Тиша та затишок у межах міста"
+        },
+        {
+            "picture": "./assets/images/icons/ben_2.png",
+            "title": "Великий номерний фонд",
+            "text": "93 комфортних номери різних категорій"
+        },
+        {
+            "picture": "./assets/images/icons/ben_3.png",
+            "title": "Ресторан",
+            "text": "Українська та європейська кухня, власна випічка"
+        },
+        {
+            "picture": "./assets/images/icons/ben_4.png",
+            "title": "Зручне розташування",
+            "text": "15 хвилин до центру Львова"
+        },
+        {
+            "picture": "./assets/images/icons/ben_5.png",
+            "title": "Pet Friendly",
+            "text": "Раді вашим улюбленцям у нашому готелі"
+        },
+        {
+            "picture": "./assets/images/icons/ben_6.png",
+            "title": "Банкетні зали для подій",
+            "text": "Ідеальне місце для свят та корпоративів"
+        }
+    ]
+}

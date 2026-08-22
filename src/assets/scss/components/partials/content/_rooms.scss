@@ -1,0 +1,14 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.rooms {
+    padding-block: var(--section_gap);
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(24px);
+        @include fluidRem(margin-bottom, 24px, 100px);
+    }
+}

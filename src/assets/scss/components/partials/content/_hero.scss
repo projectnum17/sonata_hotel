@@ -1,0 +1,41 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.hero {
+    display: flex;
+    padding-top: calc(var(--header_h) + rem(64px));
+    @include fluidRem(padding-bottom, 30px, 100px);
+
+    .container {
+        width: 100%;
+    }
+
+    &__title {
+        @include fluidRem(font-size, 80px, 226px);
+        font-family: $ff_sec;
+        font-weight: 400;
+        line-height: 100%;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        @include fluidRem(font-size, 29px, 80px);
+        font-family: $ff_sec;
+        line-height: 100%;
+        font-weight: 400;
+        text-transform: uppercase;
+        @include fluidRem(margin-bottom, 30px, 36px);
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__preview {
+        @include fluidRem(margin-bottom, 88px, 117px);
+    }
+}

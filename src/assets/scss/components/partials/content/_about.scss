@@ -1,0 +1,47 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.about {
+    position: relative;
+    padding-block: calc(var(--section_gap) + rem(80px))
+        calc(var(--section_gap) + rem(40px));
+
+    .section-subtitle {
+        @include fluidRem(margin-bottom, 63px, 80px);
+    }
+
+    .site-text {
+        max-width: rem(803px);
+        @include fluidRem(margin-bottom, 41px, 51px);
+    }
+
+    &__ico {
+        @include fluidRem(max-width, 139px, 318px);
+        @include fluidRem(margin-bottom, 63px, 80px);
+    }
+
+    &__info {
+        max-width: rem(1261px);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__bg {
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+
+        * {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

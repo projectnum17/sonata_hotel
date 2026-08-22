@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "title": "EVENT HALL",
+            "value": "До 150 гостей",
+            "square": "140 м²",
+            "picture": "./assets/images/conf_1.png"
+        },
+        {
+            "title": "BUSINESS HALL",
+            "value": "До 150 гостей",
+            "square": "140 м²",
+            "picture": "./assets/images/conf_2.png"
+        },
+        {
+            "title": "VIP ROOM",
+            "value": "До 150 гостей",
+            "square": "140 м²",
+            "picture": "./assets/images/atm_2.png"
+        },
+        {
+            "title": "Room",
+            "value": "До 150 гостей",
+            "square": "140 м²",
+            "picture": "./assets/images/atm_3.png"
+        }
+    ]
+}

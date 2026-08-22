@@ -1,0 +1,13 @@
+<section class="offers">
+    <div class="container">
+        <div class="offers__head">
+            <h2 class="section-title">Спеціальні пропозиції</h2>
+            {{> _cta text = 'більше' arrow = true}}
+        </div>
+        <div class="offers__content">
+            {{#each offers.data}}
+                {{> _offerBox this}}
+            {{/each}}
+        </div>
+    </div>
+</section>

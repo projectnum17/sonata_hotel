@@ -1,0 +1,11 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.atmosphere {
+    padding-block: var(--section_gap);
+    .section-title {
+        text-align: center;
+        @include fluidRem(margin-bottom, 24px, 80px);
+    }
+}

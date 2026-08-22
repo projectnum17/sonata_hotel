@@ -1,0 +1,86 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.faq-box {
+    counter-increment: faqCount;
+    border-bottom: 1px solid #7e877233;
+    color: $c_dark;
+
+    &.is-open {
+        .faq-box__content {
+            grid-template-rows: 1fr;
+            @include fluidRem(padding-top, 5px, 10px);
+            @include fluidRem(padding-bottom, 18px, 33px);
+        }
+        .faq-box__toggle svg {
+             transform: rotate(-90deg);
+        }
+    }
+
+    &:first-child {
+        border-top: 1px solid #7e877233;
+    }
+
+    &__info {
+        max-width: rem(1230px);
+        margin: 0 auto;
+        padding-inline: var(--container_pdd);
+    }
+
+    &__title {
+        @include fluidRem(font-size, 20px, 40px);
+        font-family: $ff_base;
+        font-weight: 400;
+        line-height: 100%;
+        &::before {
+            content: counter(faqCount) '.';
+            font: inherit;
+            padding-right: rem(10px);
+        }
+    }
+
+    &__toggle {
+        @include fluidRem(padding-block, 18px, 24px);
+        width: 100%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: rem(12px);
+        color: #584738cc;
+
+        svg {
+            flex-shrink: 0;
+            pointer-events: none;
+            width: rem(20px);
+            @include fluidRem(width, 16px, 20px);
+            aspect-ratio: 1;
+            margin-left: auto;
+            transform: rotate(90deg) rotateY(0);
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-rows: 0fr;
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    }
+
+    &__answer {
+        @include fluidRem(font-size, 16px, 24px);
+        font-family: $ff_base;
+        line-height: 100%;
+        font-weight: 400;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: rem(24px);
+        * {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<a href="javascript: void(0)" class="conference-box">
+    <div class="conference-box__preview">
+        <img src="{{ picture }}" alt="Picture">
+        <div class="conference-box__info">
+            <div class="conference-box__details">
+                <img src="./assets/images/icons/ico-users.png" alt="Icon">
+                <p>{{ value }}</p>
+            </div>
+            <div class="conference-box__details">
+                <img src="./assets/images/icons/ico-square.png" alt="Icon">
+                <p>{{ square }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="conference-box__foot">
+        <p class="conference-box__name">{{ title }}</p>
+        {{> _btnDetails tagWrapper = 'div'}}
+    </div>
+</a>

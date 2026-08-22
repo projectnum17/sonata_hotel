@@ -1,0 +1,31 @@
+{
+    "data": [
+        {
+            "picture": "./assets/images/room_1.png",
+            "naming": "Люкс",
+            "info": [
+                { "title": "1–2 гостя" },
+                { "title": "17 м²" },
+                { "title": "Від 3 200 грн" }
+            ]
+        },
+        {
+            "picture": "./assets/images/room_2.png",
+            "naming": "Люкс",
+            "info": [
+                { "title": "1–2 гостя" },
+                { "title": "17 м²" },
+                { "title": "Від 3 200 грн" }
+            ]
+        },
+        {
+            "picture": "./assets/images/room_3.png",
+            "naming": "Люкс",
+            "info": [
+                { "title": "1–2 гостя" },
+                { "title": "17 м²" },
+                { "title": "Від 3 200 грн" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+a:has(.btn-details) {
+    @include hover {
+        .btn-details {
+            border-radius: rem(50px);
+            color: #000000;
+            background: #f5ece0cc;
+
+            &__arrow {
+                svg {
+                    &:first-child {
+                        left: 100%;
+                        transform: translate(0%, -50%);
+                    }
+                    &:last-child {
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+a.btn-details {
+    @include hover {
+        border-radius: rem(50px);
+        color: #000000;
+        background: #f5ece0cc;
+
+        .btn-details__arrow {
+            svg {
+                &:first-child {
+                    left: 100%;
+                    transform: translate(0%, -50%);
+                }
+                &:last-child {
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+
+.btn-details {
+    @include fluidRem(font-size, 16px, 20px);
+    font-family: $ff_base;
+    font-weight: 400;
+    line-height: 100%;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: rem(10px);
+    @include fluidRem(padding-block, 10px, 20px);
+    @include fluidRem(padding-inline, 18px, 27px);
+    border-bottom: 1px solid #58473880;
+    color: $c_dark;
+    @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+    &__arrow {
+        pointer-events: none;
+        width: rem(16px);
+        position: relative;
+        height: rem(16px);
+        overflow: hidden;
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 100%;
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        &:first-child {
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:last-child {
+            left: 0%;
+            transform: translate(-100%, -50%);
+        }
+    }
+}

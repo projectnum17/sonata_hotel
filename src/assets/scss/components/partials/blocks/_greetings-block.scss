@@ -1,0 +1,14 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.greetings-block {
+    min-height: min(rem(1080px), 100vh);
+    min-height: min(rem(1080px), 100svh);
+    color: $c_light;
+
+    &--sm {
+        min-height: min(rem(692px), 100vh);
+        min-height: min(rem(692px), 100svh);
+    }
+}

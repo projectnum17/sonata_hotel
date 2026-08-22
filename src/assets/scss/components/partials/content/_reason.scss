@@ -1,0 +1,27 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.reason {
+    padding-block: var(--section_gap);
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: rem(24px);
+    }
+
+    .section-title {
+        max-width: rem(753px);
+        width: 100%;
+    }
+
+    .site-text {
+        text-align: left;
+        max-width: rem(866px);
+        width: 100%;
+        font-weight: 300;
+        color: #000;
+    }
+}

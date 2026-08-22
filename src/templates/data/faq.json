@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "question": "О котрій годині заїзд і виїзд з готелю?",
+            "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum temporibus architecto non sequi facilis possimus ad minus nobis a, quasi ratione soluta delectus at dolorem deserunt eaque corrupti vitae! Doloremque?"
+        },
+        {
+            "question": "Чи є у вас паркінг?",
+            "answer": "Так, на території комплексу доступний просторий безкоштовний паркінг для гостей готелю."
+        },
+        {
+            "question": "Чи входить сніданок у вартість номера?",
+            "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum temporibus architecto non sequi facilis possimus ad minus nobis a, quasi ratione soluta delectus at dolorem deserunt eaque corrupti vitae! Doloremque?"
+        },
+        {
+            "question": "Чи дозволено проживання з домашніми тваринами?",
+            "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum temporibus architecto non sequi facilis possimus ad minus nobis a, quasi ratione soluta delectus at dolorem deserunt eaque corrupti vitae! Doloremque?"
+        },
+        {
+            "question": "Чи доступна доставка їжі в номер?",
+            "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum temporibus architecto non sequi facilis possimus ad minus nobis a, quasi ratione soluta delectus at dolorem deserunt eaque corrupti vitae! Doloremque?"
+        },
+        {
+            "question": "Чи є у вас ресторан?",
+            "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum temporibus architecto non sequi facilis possimus ad minus nobis a, quasi ratione soluta delectus at dolorem deserunt eaque corrupti vitae! Doloremque?"
+        },
+        {
+            "question": "Чи можна організувати банкет, весілля або іншу подію?",
+            "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum temporibus architecto non sequi facilis possimus ad minus nobis a, quasi ratione soluta delectus at dolorem deserunt eaque corrupti vitae! Doloremque?"
+        },
+        {
+            "question": "Чи можна організувати конференцію або бізнес-захід?",
+            "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum temporibus architecto non sequi facilis possimus ad minus nobis a, quasi ratione soluta delectus at dolorem deserunt eaque corrupti vitae! Doloremque?"
+        },
+        {
+            "question": "Чи можна забронювати номер онлайн?",
+            "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum temporibus architecto non sequi facilis possimus ad minus nobis a, quasi ratione soluta delectus at dolorem deserunt eaque corrupti vitae! Doloremque?"
+        },
+        {
+            "question": "Чи можливі індивідуальні умови для груп або корпоративних клієнтів?",
+            "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum temporibus architecto non sequi facilis possimus ad minus nobis a, quasi ratione soluta delectus at dolorem deserunt eaque corrupti vitae! Doloremque?"
+        }
+    ]
+}

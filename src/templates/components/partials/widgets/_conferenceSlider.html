@@ -1,0 +1,21 @@
+<div class="conference-slider js-conference-slider">
+    <div class="conference-slider__gallery swiper">
+        <div class="conference-slider__wrapper swiper-wrapper">
+            {{#each conference.data}}
+            <div class="conference-slider__slide swiper-slide">
+                {{> _conferenceBox this}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <button type="button" class="control-btn control-btn--green control-btn--box js-control-prev">
+        <svg>
+            <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+        </svg>
+    </button>
+    <button type="button" class="control-btn control-btn--green control-btn--box js-control-next">
+        <svg>
+            <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+        </svg>
+    </button>
+</div>

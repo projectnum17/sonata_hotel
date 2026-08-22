@@ -1,0 +1,17 @@
+<div class="rooms-slider js-rooms-slider">
+    <div class="rooms-slider__gallery swiper">
+        <div class="rooms-slider__wrapper swiper-wrapper">
+            {{#each rooms.data}}
+            <div class="rooms-slider__slide swiper-slide">
+                {{> _roomBox this}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    {{#if linesPagination}}
+        {{> _linesPagination}}
+    {{/if}}
+
+    {{#if dotsPagination}}
+    {{/if}}
+</div>

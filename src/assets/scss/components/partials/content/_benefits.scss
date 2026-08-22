@@ -1,0 +1,82 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.benefits {
+    padding-block: var(--section_gap);
+    background: $c_green;
+    color: $c_light;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        @include fluidRem(padding-inline, 12px, 49px);
+        &::after {
+            content: '';
+            position: absolute;
+            height: rem(250px);
+            width: 1px;
+            right: 0;
+            top: 0;
+            background: linear-gradient(
+                123.03deg,
+                rgba(94, 62, 27, 0.5) 11.01%,
+                rgba(237, 204, 133, 0.5) 29.5%,
+                rgba(129, 85, 17, 0.5) 49.54%,
+                rgba(237, 204, 133, 0.5) 74.97%,
+                rgba(84, 64, 19, 0.5) 91.15%
+            );
+        }
+
+        &:first-child {
+            &::before {
+                content: '';
+                position: absolute;
+                height: rem(250px);
+                width: 1px;
+                left: 0;
+                top: 0;
+                background: linear-gradient(
+                    123.03deg,
+                    rgba(94, 62, 27, 0.5) 11.01%,
+                    rgba(237, 204, 133, 0.5) 29.5%,
+                    rgba(129, 85, 17, 0.5) 49.54%,
+                    rgba(237, 204, 133, 0.5) 74.97%,
+                    rgba(84, 64, 19, 0.5) 91.15%
+                );
+            }
+        }
+    }
+
+    &__ico {
+        object-fit: contain;
+        width: rem(78px);
+        height: rem(71px);
+        margin-bottom: rem(32px);
+    }
+
+    &__title {
+        @include fluidRem(font-size, 15px, 20px);
+        line-height: 100%;
+        font-weight: 600;
+        font-family: $ff_base;
+        text-transform: uppercase;
+        @include fluidRem(margin-bottom, 13px, 22px);
+    }
+
+    &__info {
+        margin-top: auto;
+        @include fluidRem(font-size, 13px, 20px);
+        font-family: $ff_base;
+        font-weight: 400;
+        line-height: 100%;
+    }
+}

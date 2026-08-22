@@ -14,13 +14,103 @@ const initHeader = () => {
         currentScroll > scrollWay && currentScroll > lastScroll
             ? header.classList.add('is-transform')
             : header.classList.remove('is-transform');
-        lastScroll = scrollWay;
+        lastScroll = currentScroll;
     };
 
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 };
 
+const initFAQ = () => {
+    const FAQboxes = document.querySelectorAll('.js-faq-box');
+    if (!FAQboxes.length) return;
+
+    FAQboxes.forEach((box) => {
+        const toggleActive = box.querySelector('.js-faq-toggle');
+        if (toggleActive) {
+            toggleActive.addEventListener('click', (e) => {
+                e.stopPropagation();
+
+                const isOpen = box.classList.contains('is-open');
+                FAQboxes.forEach((el) => el.classList.remove('is-open'));
+
+                isOpen
+                    ? box.classList.remove('is-open')
+                    : box.classList.add('is-open');
+            });
+        }
+    });
+};
+
+const initCenteredSliders = ({ selector, gap }) => {
+    if (typeof Swiper === 'undefined') return;
+
+    const sliderBlocks = document.querySelectorAll(`.js-${selector}-slider`);
+    if (!sliderBlocks.length) return;
+
+    sliderBlocks.forEach((block) => {
+        const sliderEl = block.querySelector('.swiper');
+
+        if (!sliderEl) return;
+
+        const slides = sliderEl.querySelectorAll('.swiper-slide');
+        const shouldCenter = slides.length > 2;
+
+        const pagination = block.querySelector('.js-pagination');
+        const btnPrev = block.querySelector('.js-control-prev');
+        const btnNext = block.querySelector('.js-control-next');
+
+        const swiperConfig = {
+            speed: 900,
+            grabCursor: true,
+            centeredSlides: shouldCenter,
+            spaceBetween: gap,
+            slidesPerView: 'auto',
+        };
+
+        if (btnPrev || btnNext) {
+            swiperConfig.navigation = {
+                ...(btnPrev && { prevEl: btnPrev }),
+                ...(btnNext && { nextEl: btnNext }),
+            };
+        }
+
+        if (pagination) {
+            const paginationType = pagination.classList.contains('is-dots')
+                ? 'bullets'
+                : pagination.classList.contains('is-progress')
+                  ? 'progressbar'
+                  : null;
+
+            if (paginationType) {
+                swiperConfig.pagination = {
+                    el: pagination,
+                    type: paginationType,
+                };
+
+                if (paginationType === 'bullets') {
+                    swiperConfig.pagination.clickable = true;
+                }
+            }
+        }
+
+        new Swiper(sliderEl, swiperConfig);
+    });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
+    initFAQ();
+    initCenteredSliders({
+        selector: 'atmosphere',
+        gap: 50,
+    });
+    initCenteredSliders({
+        selector: 'conference',
+        gap: 50,
+    });
+    initCenteredSliders({
+        selector: 'rooms',
+        gap: 80,
+    });
 });

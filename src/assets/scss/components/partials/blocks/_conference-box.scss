@@ -1,0 +1,83 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.conference-box {
+    display: flex;
+    flex-direction: column;
+    @include fluidRem(gap, 18px, 40px);
+    color: $c_light;
+    @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+    &__preview {
+        position: relative;
+        aspect-ratio: 673 / 726;
+        overflow: hidden;
+        height: min(rem(726px), 80vh);
+        height: min(rem(726px), 80svh);
+        background: #d9d9d9;
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: rem(150px);
+            background: linear-gradient(
+                0deg,
+                rgba(38, 13, 2, 0.5) 0%,
+                rgba(38, 13, 2, 0) 100%
+            );
+        }
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__details {
+        @include fluidRem(font-size, 14px, 18px);
+        font-weight: 500;
+        line-height: 100%;
+        font-family: $ff_base;
+        display: flex;
+        align-items: center;
+        align-items: center;
+        @include fluidRem(gap, 8px, 12px);
+
+        img {
+            object-fit: contain;
+            width: rem(20px);
+            height: rem(20px);
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        @include fluidRem(gap, 12px, 20px);
+        z-index: 2;
+        @include fluidRem(padding, 12px, 20px);
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+    &__foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(12px);
+    }
+
+    &__name {
+        @include fluidRem(font-size, 18px, 30px);
+        font-weight: 400;
+        line-height: 100%;
+        font-family: $ff_sec;
+        color: #000;
+    }
+}

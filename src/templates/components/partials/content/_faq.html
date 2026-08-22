@@ -1,0 +1,10 @@
+<section class="faq">
+    <div class="container">
+        <h2 class="section-title">Поширені запитання</h2>
+    </div>
+    <div class="faq__list">
+        {{#each faq.data}}
+            {{> _faqBox this}}
+        {{/each}}
+    </div>
+</section>

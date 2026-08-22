@@ -16,6 +16,7 @@ $c_light: #f5ece0;
 $c_dark: #584738;
 $c_white: #fff;
 $c_green: #394225;
+$c_milk: #f1eada;
 
 $gradient_gold: linear-gradient(
     123.03deg,
@@ -35,16 +36,8 @@ $gradient_accent: linear-gradient(
     #556338 97.17%
 );
 
-$gradient_secondary: linear-gradient(
-    92.98deg,
-    #384125 2.83%,
-    #687945 25.51%,
-    #526036 45.01%,
-    #687945 65.88%,
-    #556338 97.17%
-);
-
 :root {
+    @include fluidRem(--section_gap, 50px, 80px);
     --container_pdd: #{rem(80px)};
     --header_h: #{rem(150px)};
 }
@@ -54,12 +47,6 @@ $gradient_secondary: linear-gradient(
         --container_pdd: #{rem(32px)};
     }
 }
-
-// @include media('desktop-lg') {
-//     :root {
-//         --container_pdd: #{rem(50px)};
-//     }
-// }
 
 @include media('tablet') {
     :root {

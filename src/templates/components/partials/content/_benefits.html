@@ -1,0 +1,13 @@
+<section class="benefits">
+    <div class="container">
+        <ul class="benefits__list">
+            {{#each benefits.data}}
+            <li class="benefits__item">
+                <img class="benefits__ico" loading="lazy" decoding="async" src="{{ picture }}" alt="Icon">
+                <p class="benefits__title">{{ title }}</p>
+                <p class="benefits__info">{{ text }}</p>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</section>

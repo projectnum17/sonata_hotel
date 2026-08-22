@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "picture": "./assets/images/choice_1.png",
+            "title": "Обери номер"
+        },
+        {
+            "picture": "./assets/images/choice_2.png",
+            "title": "Забронюй зал"
+        },
+        {
+            "picture": "./assets/images/choice_3.png",
+            "title": "Відвідай ресторан"
+        }
+    ]
+}
