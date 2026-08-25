@@ -36,7 +36,6 @@
             @include fluidRem(font-size, 18px, 24px);
             font-weight: 400;
             line-height: 100%;
-            font-family: $ff_base;
             color: #000;
 
             img {
@@ -75,7 +74,6 @@
     &__title {
         @include fluidRem(margin-bottom, 18px, 30px);
         @include fluidRem(font-size, 16px, 20px);
-        font-family: $ff_base;
         line-height: 100%;
         font-weight: 600;
         text-transform: uppercase;

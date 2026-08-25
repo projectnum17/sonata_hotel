@@ -48,7 +48,6 @@ a.btn-details {
 
 .btn-details {
     @include fluidRem(font-size, 16px, 20px);
-    font-family: $ff_base;
     font-weight: 400;
     line-height: 100%;
     display: inline-flex;

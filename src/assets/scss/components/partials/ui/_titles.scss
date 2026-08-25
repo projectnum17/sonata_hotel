@@ -16,9 +16,33 @@
     font-family: $ff_sec;
 }
 
+.section-heading {
+    @include fluidRem(font-size, 50px, 150px);
+    line-height: 100%;
+    font-weight: 400;
+    font-family: $ff_sec;
+}
+
+.section-subheading {
+}
+
+.section-description {
+    @include fluidRem(font-size, 24px, 40px);
+    font-family: $ff_sec;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.section-label {
+    @include fluidRem(font-size, 24px, 60px);
+    line-height: 100%;
+    font-weight: 400;
+    font-family: $ff_sec;
+}
+
 .site-text {
     @include fluidRem(font-size, 16px, 24px);
-    font-family: $ff_base;
     font-weight: 400;
     display: flex;
     line-height: 100%;

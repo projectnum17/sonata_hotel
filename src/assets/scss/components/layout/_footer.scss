@@ -24,7 +24,6 @@
         @include fluidRem(font-size, 12px, 18px);
         line-height: 100%;
         font-weight: 400;
-        font-family: $ff_base;
         opacity: 0.5;
     }
 
@@ -107,7 +106,6 @@
 
     &__bot {
         @include fluidRem(font-size, 12px, 14px);
-        font-family: $ff_base;
         font-weight: 400;
         line-height: 100%;
         text-transform: uppercase;

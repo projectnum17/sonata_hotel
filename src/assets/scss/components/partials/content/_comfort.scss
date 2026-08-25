@@ -1,0 +1,27 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.comfort {
+    padding-block: calc(var(--section_gap) - rem(20px));
+
+    .section-title {
+        text-align: center;
+        margin-bottom: rem(50px);
+    }
+
+    &__collect {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        @include fluidRem(column-gap, 16px, 27px);
+        @include fluidRem(row-gap, 16px, 27px);
+        @include hover {
+            &:has(.comfort-box:hover) {
+                .comfort-box:not(:hover)::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

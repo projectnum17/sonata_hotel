@@ -63,7 +63,7 @@
 }
 
 $fluid-min-width: 767.98px;
-$fluid-max-width: 1440.98px;
+$fluid-max-width: 1920.98px;
 
 @mixin fluid($property, $min, $max) {
     $slope: math.div($max - $min, $fluid-max-width - $fluid-min-width);

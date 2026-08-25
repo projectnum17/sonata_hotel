@@ -67,7 +67,6 @@
         @include fluidRem(font-size, 15px, 20px);
         line-height: 100%;
         font-weight: 600;
-        font-family: $ff_base;
         text-transform: uppercase;
         @include fluidRem(margin-bottom, 13px, 22px);
     }
@@ -75,7 +74,6 @@
     &__info {
         margin-top: auto;
         @include fluidRem(font-size, 13px, 20px);
-        font-family: $ff_base;
         font-weight: 400;
         line-height: 100%;
     }

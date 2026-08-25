@@ -1,0 +1,10 @@
+<section class="comfort">
+    <div class="container">
+        <h2 class="section-title">Усе для вашого комфортного перебування</h2>
+        <div class="comfort__collect">
+            {{#each comfort.data}}
+                {{> _comfortBox this}}
+            {{/each}}
+        </div>
+    </div>
+</section>

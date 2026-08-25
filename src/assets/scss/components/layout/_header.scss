@@ -18,11 +18,15 @@
     text-transform: uppercase;
     color: $c_light;
     border-bottom: 1px solid transparent;
-    background: #00000030;
-    backdrop-filter: blur(11px);
+    background: transparent;
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     @media (max-width: 1540.98px) {
         font-size: rem(14px);
+    }
+
+    &--blur {
+        background: #00000030;
+        backdrop-filter: blur(11px);
     }
 
     &.is-transform {

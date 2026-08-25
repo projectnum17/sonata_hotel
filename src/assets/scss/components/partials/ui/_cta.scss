@@ -6,7 +6,6 @@
     position: relative;
     @include fluidRem(font-size, 14px, 18px);
     line-height: 100%;
-    font-family: $ff_base;
     font-weight: 400;
     text-transform: uppercase;
     @include fluidRem(padding-block, 11px, 14px);
