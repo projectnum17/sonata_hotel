@@ -1,0 +1,10 @@
+<section class="fund">
+    <div class="container">
+        <div class="fund__collect">
+            {{#each rooms.data}}
+                {{> _roomBox this brickBox = true}}
+            {{/each}}
+            <p class="empty-state" style="display: none;">Номери відсутні</p>
+        </div>
+    </div>
+</section>

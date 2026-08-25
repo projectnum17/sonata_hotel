@@ -52,3 +52,10 @@
         text-decoration: underline;
     }
 }
+
+.empty-state {
+    @include fluidRem(font-size, 24px, 40px);
+    font-family: $ff_sec;
+    text-transform: uppercase;
+    text-align: center;
+}

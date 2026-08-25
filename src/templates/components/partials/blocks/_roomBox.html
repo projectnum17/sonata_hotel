@@ -1,20 +1,50 @@
-<a href="javascript: void(0)" class="room-box">
-    <img src="{{ picture }}" alt="">
-    <div class="room-box__content">
-        <div class="room-box__details">
-            <p class="room-box__name">{{ naming }}</p>
-            <ul class="room-box__list">
-                {{#each info}}
-                <li>
-                    {{ title }}
-                </li>
-                {{/each}}
-            </ul>
+{{#if linkBox}}
+<a href="javascript: void(0)" class="room-box room-box--link">
+    <div class="room-box__preview">
+        <img src="{{ picture }}" alt="">
+        <div class="room-box__content">
+            <div class="room-box__details">
+                <p class="room-box__name">{{ naming }}</p>
+                <ul class="room-box__list">
+                    {{#each info}}
+                    <li>
+                        {{ title }}
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="control-btn control-btn--white control-btn--box">
+            <svg>
+                <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+            </svg>
         </div>
     </div>
-    <div class="control-btn control-btn--white control-btn--box">
-        <svg>
-            <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
-        </svg>
-    </div>
 </a>
+{{/if}}
+
+{{#if brickBox}}
+<div class="room-box room-box--brick">
+    <div class="room-box__preview">
+        <img src="{{ picture }}" alt="">
+        <div class="room-box__content">
+            <div class="room-box__details">
+                <p class="room-box__name">{{ naming }}</p>
+                <ul class="room-box__list">
+                    {{#each info}}
+                    <li>
+                        {{ title }}
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="room-box__foot">
+        <a href="javascript: void(0)" class="cta cta--transparent cta--accent">
+            <span>детальніше про номер</span>
+        </a>
+        {{> _cta text = 'Забронювати' arrow = true}}
+    </div>
+</div>
+{{/if}}

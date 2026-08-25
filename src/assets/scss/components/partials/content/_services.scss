@@ -6,6 +6,8 @@ body {
     &:has(.header.is-transform) {
         .services__preview {
             top: rem(20px);
+            height: min(rem(880px), calc(100vh - rem(50px)));
+            height: min(rem(880px), calc(100svh - rem(50px)));
         }
     }
 }
@@ -108,8 +110,8 @@ body {
         overflow: hidden;
         aspect-ratio: 879 / 880;
         max-width: rem(879px);
-        height: min(rem(880px), 85vh);
-        height: min(rem(880px), 85svh);
+        height: min(rem(880px), calc(100vh - rem(120px)));
+        height: min(rem(880px), calc(100svh - rem(120px)));
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
         & > img,
@@ -123,7 +125,7 @@ body {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            bottom: rem(50px);
+            @include fluidRem(bottom, 24px, 50px);
         }
     }
 }

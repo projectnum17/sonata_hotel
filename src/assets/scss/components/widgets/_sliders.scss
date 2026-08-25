@@ -19,7 +19,6 @@ section:has(.swiper) {
     }
 
     &__pic {
-        // max-width: rem(1355px);
         width: 100%;
         height: 100%;
         aspect-ratio: 1355 / 765;
@@ -82,7 +81,5 @@ section:has(.swiper) {
     &__slide {
         width: auto;
         width: min(100%, rem(976px));
-        // height: min(rem(765px), 85vh);
-        // height: min(rem(765px), 85svh);
     }
 }

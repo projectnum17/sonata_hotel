@@ -1,0 +1,17 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.fund {
+    padding-block: var(--section_gap);
+    &__collect {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        @include fluidRem(row-gap, 40px, 100px);
+        @include fluidRem(column-gap, 12px, 48px);
+    }
+
+    .empty-state {
+        grid-column: span 2;
+    }
+}
