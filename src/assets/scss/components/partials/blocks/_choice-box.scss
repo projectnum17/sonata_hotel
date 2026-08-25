@@ -70,8 +70,6 @@
     &__title {
         @include fluidRem(font-size, 24px, 40px);
         font-family: $ff_sec;
-        line-height: 100%;
-        font-weight: 400;
         color: $c_milk;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     }
@@ -81,8 +79,6 @@
         position: relative;
         @include fluidRem(font-size, 16px, 20px);
         font-size: 20px;
-        font-weight: 400;
-        line-height: 100%;
         text-transform: uppercase;
         display: flex;
         align-items: center;

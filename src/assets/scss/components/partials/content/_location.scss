@@ -1,0 +1,41 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.location {
+    padding-block: calc(var(--section_gap) - rem(15px));
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(45px);
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include fluidRem(gap, 24px, 40px);
+    }
+
+    &__target {
+        @include fluidRem(font-size, 20px, 30px);
+        font-weight: 500;
+        text-decoration: underline;
+        color: #584738cc;
+    }
+
+    &__map {
+        height: min(rem(659px), 95vh);
+        height: min(rem(659px), 95svh);
+        max-width: rem(872px);
+        aspect-ratio: 872 / 659;
+        overflow: hidden;
+        * {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

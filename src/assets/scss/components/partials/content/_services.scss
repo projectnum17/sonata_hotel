@@ -1,0 +1,129 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+body {
+    &:has(.header.is-transform) {
+        .services__preview {
+            top: rem(20px);
+        }
+    }
+}
+
+.services {
+    padding-top: rem(16px);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__sticky {
+        width: 50%;
+        position: relative;
+        padding-block: calc(var(--section_gap) / 2);
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            background: linear-gradient(
+                123.03deg,
+                rgba(94, 62, 27, 0.5) 41.31%,
+                rgba(237, 204, 133, 0.5) 59.8%,
+                rgba(129, 85, 17, 0.5) 79.84%,
+                rgba(237, 204, 133, 0.5) 105.27%,
+                rgba(84, 64, 19, 0.5) 121.45%
+            );
+        }
+    }
+
+    &__info {
+        position: relative;
+        width: 50%;
+        padding-block: var(--section_gap);
+        padding-inline: rem(30px) rem(70px);
+        display: flex;
+        flex-direction: column;
+        @include fluidRem(gap, 40px, 80px);
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            background: linear-gradient(
+                123.03deg,
+                rgba(94, 62, 27, 0.5) 41.31%,
+                rgba(237, 204, 133, 0.5) 59.8%,
+                rgba(129, 85, 17, 0.5) 79.84%,
+                rgba(237, 204, 133, 0.5) 105.27%,
+                rgba(84, 64, 19, 0.5) 121.45%
+            );
+        }
+
+        &::after {
+            left: 0;
+        }
+
+        &::before {
+            right: 0;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        @include fluidRem(gap, 40px, 60px);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        @include fluidRem(gap, 20px, 40px);
+        @include fluidRem(font-size, 14px, 24px);
+        font-weight: 600;
+        text-transform: uppercase;
+        li {
+            display: flex;
+            align-items: center;
+            gap: rem(10px);
+        }
+
+        img {
+            object-fit: contain;
+            width: rem(90px);
+            height: rem(67px);
+        }
+    }
+
+    &__preview {
+        width: 100%;
+        position: sticky;
+        top: rem(100px);
+        overflow: hidden;
+        aspect-ratio: 879 / 880;
+        max-width: rem(879px);
+        height: min(rem(880px), 85vh);
+        height: min(rem(880px), 85svh);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        & > img,
+        & > video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cta {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: rem(50px);
+        }
+    }
+}

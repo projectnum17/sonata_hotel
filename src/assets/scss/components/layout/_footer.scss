@@ -22,8 +22,6 @@
 
     &__title {
         @include fluidRem(font-size, 12px, 18px);
-        line-height: 100%;
-        font-weight: 400;
         opacity: 0.5;
     }
 
@@ -34,7 +32,6 @@
             justify-content: flex-end;
             @include fluidRem(font-size, 18px, 24px);
             line-height: 248%;
-            font-weight: 400;
             font-family: $ff_sec;
         }
 
@@ -52,8 +49,6 @@
 
     &__info {
         @include fluidRem(font-size, 18px, 24px);
-        line-height: 100%;
-        font-weight: 400;
         font-family: $ff_sec;
     }
 
@@ -106,8 +101,6 @@
 
     &__bot {
         @include fluidRem(font-size, 12px, 14px);
-        font-weight: 400;
-        line-height: 100%;
         text-transform: uppercase;
         @include fluidRem(padding-block, 20px, 38px);
         border-top: 1px solid #ffffff33;

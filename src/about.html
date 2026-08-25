@@ -1,0 +1,28 @@
+---
+layout: default
+pageName: About
+pageDescription: About
+---
+<section class="intro greetings-block">
+    <div class="container">
+        <div class="intro__preview">
+            <h1 class="section-heading">SONATA HOTEL</h1>
+            <div class="site-text site-text--sm">
+                <p>
+                    Комфортний відпочинок у Львові для бізнесу та подорожей
+                </p>
+            </div>
+            {{> _cta text = 'забронювати' }}
+        </div>
+    </div>
+    <div class="bg-layer">
+        <img src="./assets/images/bg-rooms.png" alt="">
+    </div>
+</section>
+{{> _services}}
+{{> _atmosphere dotsPagination = true}}
+{{> _faq
+    title = 'Поширені запитання'
+}}
+{{> _location}}
+{{> _reason}}

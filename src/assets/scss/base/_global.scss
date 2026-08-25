@@ -9,7 +9,7 @@ html {
 body {
     font-family: $ff_base, $system-ff;
     font-weight: 400;
-    line-height: 100%;
+    line-height: 1;
     @include fluidRem(font-size, 14px, 18px);
     min-height: 100vh;
     min-height: 100dvh;
@@ -20,6 +20,10 @@ body {
 
     &.is-locked {
         overflow: hidden;
+    }
+
+    *  {
+            font-weight: inherit;
     }
 }
 

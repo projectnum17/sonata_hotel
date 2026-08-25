@@ -41,7 +41,6 @@
     &__details {
         @include fluidRem(font-size, 14px, 18px);
         font-weight: 500;
-        line-height: 100%;
         display: flex;
         align-items: center;
         align-items: center;
@@ -74,8 +73,6 @@
 
     &__name {
         @include fluidRem(font-size, 18px, 30px);
-        font-weight: 400;
-        line-height: 100%;
         font-family: $ff_sec;
         color: #000;
     }
