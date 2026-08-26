@@ -1,0 +1,13 @@
+<section class="menu">
+    <div class="container">
+        <div class="section-head">
+            <h2 class="section-title">Конференц-меню</h2>
+            {{> _cta text = 'забронювати зал'}}
+        </div>
+        <div class="comfort-collect">
+            {{#each comfort.data}}
+                {{> _comfortBox this}}
+            {{/each}}
+        </div>
+    </div>
+</section>

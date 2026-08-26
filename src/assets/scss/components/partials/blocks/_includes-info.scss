@@ -2,14 +2,12 @@
 @use '../../../base/mixins' as *;
 @use '../../../base/media' as *;
 
-.includes {
-    &__info {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        @include fluidRem(gap, 43px, 112px);
-        padding-block: var(--section_gap);
-    }
+.includes-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include fluidRem(gap, 43px, 112px);
+    padding-block: var(--section_gap);
 
     &__list {
         max-width: rem(1325px);
@@ -21,6 +19,12 @@
         @include fluidRem(row-gap, 20px, 40px);
         @include fluidRem(column-gap, 20px, 80px);
         color: #000;
+
+        &--sm {
+            max-width: rem(1120px);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
         li {
             display: flex;
             align-items: center;

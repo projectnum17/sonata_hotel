@@ -1,0 +1,9 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.gallery {
+    .section-title {
+        @include fluidRem(margin-bottom, 30px, 80px);
+    }
+}

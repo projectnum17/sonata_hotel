@@ -1,0 +1,278 @@
+---
+layout: default
+pageName: Conference
+pageDescription: Conference
+---
+<section class="intro greetings-block">
+    <div class="container">
+        <div class="intro__preview">
+            <h1 class="section-subheading">Конференц сервіс</h1>
+            <div class="site-text">
+                <p>
+                    Комфортний відпочинок у Львові для бізнесу та подорожей
+                </p>
+            </div>
+            {{> _cta text = 'забронювати' }}
+        </div>
+    </div>
+    <div class="bg-layer">
+        <img src="./assets/images/bg-conf.png" alt="">
+    </div>
+</section>
+<section class="preview">
+    <div class="container">
+        <h2 class="section-title">EVENT HALL</h2>
+    </div>
+    <div class="show-box">
+        <div class="show-box__gallery js-simple-slider js-preview-slider">
+            <div class="show-box__show swiper">
+                <div class="show-box__wrapper swiper-wrapper">
+                    <div class="show-box__slide swiper-slide">
+                        <div class="show-box__preview">
+                            <img loading="lazy" decoding="async" src="./assets/images/room_1.png" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="show-box__slide swiper-slide">
+                        <div class="show-box__preview">
+                            <img loading="lazy" decoding="async" src="./assets/images/room_2.png" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="show-box__slide swiper-slide">
+                        <div class="show-box__preview">
+                            <img loading="lazy" decoding="async" src="./assets/images/room_3.png" alt="Picture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-box">
+                <button type="button" class="control-btn control-btn--milk control-btn--circle js-control-prev">
+                    <svg>
+                        <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                    </svg>
+                </button>
+                <button type="button" class="control-btn control-btn--milk control-btn--circle js-control-next">
+                    <svg>
+                        <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="show-box__info">
+            <ul class="show-box__conditions">
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/ico-build.png" alt="Icon">
+                    <p>площа: <span>120M²</span></p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/ico-floor.png" alt="Icon">
+                    <p>поверх: <span>1</span></p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/ico-peoples.png" alt="Icon">
+                    <p><span>до 100 осіб</span></p>
+                </li>
+            </ul>
+            <div class="show-box__details">
+                <p>
+                    Просторий зал, що ідеально підходить для конференцій, семінарів, презентацій, ділових зустрічей та
+                    урочистих подій. Простір легко трансформується під різні формати заходів, забезпечуючи комфортну
+                    атмосферу для кожного гостя.
+                </p>
+                <p>
+                    Додатково ми пропонуємо організацію кава-перерв, фуршетів, комплексних обідів і вечерь, щоб ваш
+                    захід пройшов максимально комфортно та без зайвих турбот.
+                </p>
+            </div>
+            <a href="javascript: void(0)" class="cta cta--transparent cta--accent">
+                <span>конференц-меню</span>
+            </a>
+            <div class="show-box__foot">
+                <p class="show-box__title">Контакти</p>
+                <div class="show-box__connect">
+                    <div class="show-box__group">
+                        <a href="tel:+380322325000">+38 (032) 232-50-00</a>
+                        <a href="tel:+380322325000">+38 (032) 232-50-00</a>
+                    </div>
+                    <div class="show-box__group">
+                        <a href="mailto:info@sonatahotel.com.ua">info@sonatahotel.com.ua</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="show-box__bg">
+            <img src="./assets/images/branch-sm.svg" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <div class="includes-info">
+            <h3 class="section-label">Обладнання</h3>
+            <ul class="includes-info__list includes-info__list--sm">
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_8.png" alt="Icon">
+                    <p>Проєктор та проекційний екран</p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_9.png" alt="Icon">
+                    <p>професійна звукова система</p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_10.png" alt="Icon">
+                    <p>Ноутбук для презентацій</p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_11.png" alt="Icon">
+                    <p>Фліпчарт та маркери</p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_12.png" alt="Icon">
+                    <p>Лазерна указка</p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_13.png" alt="Icon">
+                    <p>Бездротовий мікрофон</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="preview__bg">
+        <img src="./assets/images/branch-sm.svg" alt="">
+    </div>
+</section>
+{{> _gallery
+    slides=(
+        array
+            (hash picture='./assets/images/atm_1.png')
+            (hash picture='./assets/images/atm_2.png')
+            (hash picture='./assets/images/atm_3.png')
+    )
+}}
+<section class="preview">
+    <div class="container">
+        <h2 class="section-title">Vip Room</h2>
+    </div>
+    <div class="show-box">
+        <div class="show-box__gallery js-simple-slider js-preview-slider">
+            <div class="show-box__show swiper">
+                <div class="show-box__wrapper swiper-wrapper">
+                    <div class="show-box__slide swiper-slide">
+                        <div class="show-box__preview">
+                            <img loading="lazy" decoding="async" src="./assets/images/room_1.png" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="show-box__slide swiper-slide">
+                        <div class="show-box__preview">
+                            <img loading="lazy" decoding="async" src="./assets/images/room_2.png" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="show-box__slide swiper-slide">
+                        <div class="show-box__preview">
+                            <img loading="lazy" decoding="async" src="./assets/images/room_3.png" alt="Picture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-box">
+                <button type="button" class="control-btn control-btn--milk control-btn--circle js-control-prev">
+                    <svg>
+                        <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                    </svg>
+                </button>
+                <button type="button" class="control-btn control-btn--milk control-btn--circle js-control-next">
+                    <svg>
+                        <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="show-box__info">
+            <ul class="show-box__conditions">
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/ico-build.png" alt="Icon">
+                    <p>площа: <span>120M²</span></p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/ico-floor.png" alt="Icon">
+                    <p>поверх: <span>1</span></p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/ico-peoples.png" alt="Icon">
+                    <p><span>до 100 осіб</span></p>
+                </li>
+            </ul>
+            <div class="show-box__details">
+                <p>
+                    VIP Room — затишний конференц-зал для ділових переговорів, зустрічей, тренінгів, презентацій та стратегічних сесій у вузькому колі. Камерна атмосфера створює комфортні умови для продуктивної роботи, а різні варіанти розсадки дозволяють легко адаптувати простір під формат вашої події.
+                </p>
+                <p>
+                    За потреби команда ресторану організує кава-перерви, фуршети, комплексні обіди чи вечері для учасників заходу.
+                </p>
+            </div>
+            <a href="javascript: void(0)" class="cta cta--transparent cta--accent">
+                <span>конференц-меню</span>
+            </a>
+            <div class="show-box__foot">
+                <p class="show-box__title">Контакти</p>
+                <div class="show-box__connect">
+                    <div class="show-box__group">
+                        <a href="tel:+380322325000">+38 (032) 232-50-00</a>
+                        <a href="tel:+380322325000">+38 (032) 232-50-00</a>
+                    </div>
+                    <div class="show-box__group">
+                        <a href="mailto:info@sonatahotel.com.ua">info@sonatahotel.com.ua</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="show-box__bg">
+            <img src="./assets/images/branch-sm.svg" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <div class="includes-info">
+            <h3 class="section-label">Обладнання</h3>
+            <ul class="includes-info__list includes-info__list--sm">
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_8.png" alt="Icon">
+                    <p>Проєктор та проекційний екран</p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_9.png" alt="Icon">
+                    <p>професійна звукова система</p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_10.png" alt="Icon">
+                    <p>Ноутбук для презентацій</p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_11.png" alt="Icon">
+                    <p>Фліпчарт та маркери</p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_12.png" alt="Icon">
+                    <p>Лазерна указка</p>
+                </li>
+                <li>
+                    <img loading="lazy" decoding="async" src="./assets/images/icons/incl_13.png" alt="Icon">
+                    <p>Бездротовий мікрофон</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="preview__bg">
+        <img src="./assets/images/branch-sm.svg" alt="">
+    </div>
+</section>
+{{> _gallery
+    slides=(
+        array
+            (hash picture='./assets/images/choice_1.png')
+            (hash picture='./assets/images/theatre.png')
+            (hash picture='./assets/images/choice_2.png')
+            (hash picture='./assets/images/choice_3.png')
+    )
+}}
+{{> _menu}}
+{{> _faq
+    title = 'Поширені запитання'
+}}
+{{> _reason}}

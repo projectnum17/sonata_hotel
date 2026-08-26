@@ -25,6 +25,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: calc(var(--header_h) / 2);
         @include fluidRem(gap, 40px, 50px);
         flex: 1;
     }

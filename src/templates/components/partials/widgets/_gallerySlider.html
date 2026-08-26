@@ -1,0 +1,20 @@
+<div class="gallery-slider js-simple-slider js-gallery-slider">
+    <div class="gallery-slider__show swiper">
+        <div class="gallery-slider__wrapper swiper-wrapper">
+            {{#each slides}}
+                <div class="gallery-slider__slide swiper-slide">
+                    <div class="gallery-slider__pic">
+                        <img loading="lazy" decoding="async" src="{{ picture }}" alt="Picture">
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="navigation-box">
+        <button type="button" class="control-btn control-btn--milk control-btn--circle js-control-next">
+            <svg>
+                <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+            </svg>
+        </button>
+    </div>
+</div>

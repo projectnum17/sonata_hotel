@@ -37,7 +37,7 @@ $gradient_accent: linear-gradient(
 );
 
 :root {
-    @include fluidRem(--section_gap, 50px, 80px);
+    @include fluidRem(--section_gap, 50px, 100px);
     --container_pdd: #{rem(80px)};
     --header_h: #{rem(150px)};
 }

@@ -60,6 +60,19 @@
     }
 }
 
+.navigation-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(12px);
+
+    &:has(.control-btn:only-child) {
+        .control-btn {
+            transform: rotate(0);
+        }
+    }
+}
+
 .control-btn {
     @include fluidRem(width, 40px, 50px);
     @include fluidRem(height, 40px, 50px);
@@ -97,6 +110,16 @@
         }
     }
 
+    &--milk {
+        background: $c_light;
+        color: $c_dark;
+        border: 1px solid $c_light;
+        &.swiper-button-disabled {
+            background: transparent;
+            color: $c_light;
+        }
+    }
+
     &--green {
         border: 1px solid #3e472a33;
         background: #3e472a;
@@ -122,6 +145,16 @@
 
         &.swiper-button-disabled {
             opacity: 0.5;
+        }
+    }
+
+    &--circle {
+        border-radius: 50%;
+        @include fluidRem(width, 38px, 74px);
+        @include fluidRem(height, 38px, 74px);
+        svg {
+            @include fluidRem(width, 12px, 15px);
+            @include fluidRem(height, 12px, 15px);
         }
     }
 }

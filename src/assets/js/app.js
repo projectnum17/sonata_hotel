@@ -98,6 +98,45 @@ const initCenteredSliders = ({ selector, gap }) => {
     });
 };
 
+const simpleSlidersConfigs = {
+    'js-preview-slider': {
+        slidesPerView: 1,
+        spaceBetween: 0,
+    },
+    'js-gallery-slider': {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+    },
+};
+
+const initSimpleSlider = () => {
+    if (typeof Swiper === 'undefined') return;
+
+    const sliderBlocks = document.querySelectorAll('.js-simple-slider');
+    if (!sliderBlocks.length) return;
+
+    sliderBlocks.forEach((block) => {
+        const sliderEl = block.querySelector('.swiper');
+        if (!sliderEl) return;
+
+        const configClass = Object.keys(simpleSlidersConfigs).find((className) =>
+            block.classList.contains(className),
+        );
+
+        const config = configClass ? simpleSlidersConfigs[configClass] : {};
+
+        new Swiper(sliderEl, {
+            speed: 900,
+            grabCursor: true,
+            navigation: {
+                prevEl: block.querySelector('.js-control-prev'),
+                nextEl: block.querySelector('.js-control-next'),
+            },
+            ...config,
+        });
+    });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
     initFAQ();
@@ -113,4 +152,5 @@ document.addEventListener('DOMContentLoaded', () => {
         selector: 'rooms',
         gap: 80,
     });
+    initSimpleSlider();
 });
