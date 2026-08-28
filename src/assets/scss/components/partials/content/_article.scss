@@ -1,0 +1,70 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.article {
+    @include fluidRem(padding-block, 50px, 78px);
+
+    &__content {
+        max-width: rem(1320px);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: rem(35px);
+        @include fluidRem(font-size, 18px, 24px);
+
+        * {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        h2,
+        h3 {
+            font-style: italic;
+            font-weight: 500;
+            @include fluidRem(font-size, 24px, 40px);
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-style: italic;
+            font-weight: 500;
+            @include fluidRem(font-size, 20px, 36px);
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                position: relative;
+                padding-left: rem(41px);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: rem(-4px);
+                    width: rem(25px);
+                    height: rem(25px);
+                    background: url('../images/icons/ico-leaf.svg') no-repeat center center / contain;
+                }
+            }
+        }
+
+        ol,
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: rem(20px);
+            @include fluidRem(font-size, 14px, 24px);
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #584738cc;
+        }
+    }
+}
