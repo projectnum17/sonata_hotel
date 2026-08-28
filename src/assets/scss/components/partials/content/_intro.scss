@@ -12,6 +12,11 @@
             margin-bottom: calc(var(--header_h) / 4);
         }
     }
+    &:has(.restaurant-list) {
+        .intro__preview {
+            margin-bottom: calc(var(--header_h) / 4);
+        }
+    }
 
     .container {
         width: 100%;
@@ -56,5 +61,40 @@
                 object-fit: contain;
             }
         }
+    }
+}
+
+.restaurant-reserve {
+    display: flex;
+    align-items: center;
+    gap: rem(14px);
+    a {
+        @include fluidRem(font-size, 24px, 26px);
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+}
+
+.restaurant-list {
+    flex-wrap: wrap;
+    @include fluidRem(font-size, 14px, 20px);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include fluidRem(gap, 12px, 38px);
+
+    li {
+        &:not(:last-child) {
+            @include fluidRem(padding-right, 12px, 38px);
+            border-right: 1px solid $c_light;
+        }
+    }
+
+    a {
+        text-decoration: underline;
     }
 }

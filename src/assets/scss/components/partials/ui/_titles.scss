@@ -40,6 +40,10 @@
     text-align: center;
     gap: rem(24px);
 
+    &--md {
+        @include fluidRem(font-size, 18px, 22px);
+    }
+
     &--sm {
         @include fluidRem(font-size, 16px, 20px);
     }

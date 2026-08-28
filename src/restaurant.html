@@ -1,0 +1,120 @@
+---
+layout: default
+pageName: Restaurant
+pageDescription: Restaurant
+---
+<section class="intro greetings-block">
+    <div class="container">
+        <div class="intro__preview">
+            <h1 class="section-subheading">Ресторан</h1>
+            <div class="restaurant-reserve">
+                <div class="site-text site-text--sm">
+                    <p>Бронювання столиків</p>
+                </div>
+                <a href="tel:+380933144045">+38 (093) 314-40-45</a>
+            </div>
+        </div>
+        <ul class="restaurant-list">
+            <li>
+                <p>Karaoke</p>
+            </li>
+            <li>
+                <p>Garden Hall</p>
+            </li>
+            <li>
+                <a href="javascript: void(0)">Event Hall</a>
+            </li>
+            <li>
+                <p>Terrace</p>
+            </li>
+            <li>
+                <p>Vip Hall</p>
+            </li>
+            <li>
+                <p>Breakfast Hall</p>
+            </li>
+        </ul>
+    </div>
+    <div class="bg-layer">
+        <img src="./assets/images/bg-rest.png" alt="">
+    </div>
+</section>
+{{> _details
+cta = true
+content = '
+<h2>Більше, ніж просто ресторан</h2>
+<p>
+    Запрошуємо насолодитися авторськими стравами української та європейської кухні у теплій атмосфері нашого ресторану.
+    Ідеальне місце для сімейних вечерь, романтичних зустрічей, бізнес-обідів і святкових подій.
+</p>
+'
+}}
+{{> _maintenance}}
+{{> _showcase}}
+{{> _garden}}
+{{> _design}}
+{{> _event}}
+<section class="garden">
+    <div class="container">
+        <div class="garden__head">
+            <h2 class="section-title">Garden Hall</h2>
+            <div class="garden__txts">
+                <p>
+                    Для Вас цілодобово працює Тераса нашого ресторану. Простора та світла, вона стане найкращим місцем
+                    для відпочинку та релаксації в будь-який час.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="grid-gallery">
+        <div class="grid-gallery__pic">
+            <img loading="lazy" decoding="async" src="./assets/images/garden_1.png" alt="Picture">
+        </div>
+        <div class="grid-gallery__pic">
+            <img loading="lazy" decoding="async" src="./assets/images/garden_2.png" alt="Picture">
+        </div>
+        <div class="grid-gallery__pic">
+            <img loading="lazy" decoding="async" src="./assets/images/event_1.png" alt="Picture">
+        </div>
+    </div>
+</section>
+<section class="event event--reverse">
+    <div class="event__preview event__preview--lg">
+        <img loading="lazy" decoding="async" src="./assets/images/event_1.png" alt="Picture">
+    </div>
+    <div class="event__info">
+        <div class="event__txts">
+            <h2>Vip Hall</h2>
+            <p>
+                Комфортний, невеликий зал для святкування урочистих заходів, VIP прийомів, ділових зустрічей чи просто сімейних вечерь… Невимушений інтер”єр та вишукана кухня ресторану дозволить Вам отримати максимум задоволення від проведеного часу!
+            </p>
+        </div>
+        <div class="event__preview event__preview--sm">
+            <img loading="lazy" decoding="async" src="./assets/images/event_2.png" alt="Picture">
+        </div>
+    </div>
+</section>
+<section class="garden">
+    <div class="container">
+        <div class="garden__head">
+            <h2 class="section-title">Breakfast Hall</h2>
+            <div class="garden__txts">
+                <p>
+                    День, який починається з корисного та поживного сніданку обов’язково буде наповнений гарним настроєм та новими силами.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="garden__gallery garden__gallery--reverse">
+        <div class="garden__pic garden__pic--lg">
+            <img loading="lazy" decoding="async" src="./assets/images/garden_1.png" alt="Picture">
+        </div>
+        <div class="garden__pic garden__pic--sm">
+            <img loading="lazy" decoding="async" src="./assets/images/garden_2.png" alt="Picture">
+        </div>
+    </div>
+</section>
+{{> _faq
+title = 'Поширені запитання'
+}}
+{{> _reason}}

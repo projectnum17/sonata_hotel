@@ -63,30 +63,6 @@
         );
     }
 
-    &__conditions {
-        display: flex;
-        align-items: center;
-        @include fluidRem(gap, 6px, 31px);
-
-        li {
-            display: flex;
-            align-items: center;
-            gap: rem(10px);
-            @include fluidRem(font-size, 14px, 20px);
-            line-height: 95%;
-
-            span {
-                font-weight: bold;
-            }
-
-            img {
-                width: rem(22px);
-                height: rem(22px);
-                object-fit: contain;
-            }
-        }
-    }
-
     &__details {
         @include fluidRem(font-size, 16px, 22px);
         display: flex;

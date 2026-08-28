@@ -8,6 +8,12 @@
         calc(var(--section_gap) + rem(72px));
     position: relative;
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__txts {
         max-width: rem(1035px);
         margin: 0 auto;
@@ -33,6 +39,8 @@
 
         p {
             text-align: center;
+            max-width: rem(780px);
+            margin: 0 auto;
         }
 
         * {
@@ -57,5 +65,14 @@
             height: 100%;
             object-fit: cover;
         }
+    }
+
+    .cta {
+        margin: 0 auto;
+        @include fluidRem(margin-top, 41px, 51px);
+        justify-content: center;
+        align-items: center;
+        min-width: rem(235px);
+        min-height: rem(60px);
     }
 }

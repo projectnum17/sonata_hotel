@@ -1,0 +1,66 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.showcase {
+    padding-top: var(--section_gap);
+    display: flex;
+    align-items: center;
+    @include fluidRem(gap, 14px, 80px);
+
+    &__pic {
+        overflow: hidden;
+        width: 65%;
+        aspect-ratio: 1172 / 905;
+        max-height: min(rem(905px), 90vh);
+        max-height: min(rem(905px), 90svh);
+
+        * {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        padding-block: rem(24px);
+        padding-right: max(
+            var(--container_pdd),
+            calc((100% - #{$container_wdth}) / 2 + var(--container_pdd))
+        );
+        width: 35%;
+        @include fluidRem(font-size, 16px, 22px);
+        color: #584738cc;
+
+        h2,
+        h3 {
+            @include fluidRem(font-size, 30px, 90px);
+            font-family: $ff_sec;
+            line-height: 107%;
+            margin: 0;
+            @include fluidRem(margin-bottom, 14px, 80px);
+        }
+
+        h4,
+        h5,
+        h6 {
+            @include fluidRem(font-size, 24px, 72px);
+            font-family: $ff_sec;
+            line-height: 107%;
+            margin: 0;
+            @include fluidRem(margin-bottom, 14px, 80px);
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        * {
+            margin-top: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

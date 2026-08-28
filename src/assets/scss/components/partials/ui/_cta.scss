@@ -3,6 +3,8 @@
 @use '../../../base/media' as *;
 
 .cta {
+    min-height: rem(54px);
+    align-items: center;
     position: relative;
     @include fluidRem(font-size, 14px, 18px);
     text-transform: uppercase;
