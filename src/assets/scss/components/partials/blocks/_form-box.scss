@@ -1,0 +1,64 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.form-box {
+    &__data {
+        display: flex;
+        flex-direction: column;
+        @include fluidRem(gap, 20px, 30px);
+    }
+
+    .cta {
+        width: 100%;
+        justify-content: center;
+        @include fluidRem(min-height, 51px, 68px);
+    }
+}
+
+.handler-field {
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+
+    &:has(input:hover),
+    &:has(input:focus) {
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &::after {
+        opacity: 0;
+        visibility: hidden;
+        padding: 0;
+        content: '';
+        position: absolute;
+        inset: 0;
+        padding: rem(2px);
+        border-radius: inherit;
+        background: $gradient_gold;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    }
+
+    input {
+        font-size: rem(18px);
+        @include fluidRem(min-height, 51px, 68px);
+        width: 100%;
+        outline: none;
+        padding: rem(15px) rem(30px);
+        border: none;
+        background: #39422526;
+        color: inherit;
+        &::placeholder {
+            color: #58473880;
+        }
+    }
+}

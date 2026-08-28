@@ -33,6 +33,12 @@
     font-family: $ff_sec;
 }
 
+.section-details {
+    @include fluidRem(font-size, 14px, 24px);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 .site-text {
     @include fluidRem(font-size, 16px, 24px);
     display: flex;

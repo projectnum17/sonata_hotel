@@ -32,6 +32,17 @@
             transform: translateY(-25%);
             top: 0;
             z-index: 1;
+
+            &--l {
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 0;
+            }
+            &--r {
+                transform: translate(50%, -50%) rotate(180deg);
+                top: 50%;
+                right: 0;
+            }
         }
         .container {
             position: relative;

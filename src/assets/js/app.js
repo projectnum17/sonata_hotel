@@ -119,8 +119,8 @@ const initSimpleSlider = () => {
         const sliderEl = block.querySelector('.swiper');
         if (!sliderEl) return;
 
-        const configClass = Object.keys(simpleSlidersConfigs).find((className) =>
-            block.classList.contains(className),
+        const configClass = Object.keys(simpleSlidersConfigs).find(
+            (className) => block.classList.contains(className),
         );
 
         const config = configClass ? simpleSlidersConfigs[configClass] : {};
@@ -133,6 +133,18 @@ const initSimpleSlider = () => {
                 nextEl: block.querySelector('.js-control-next'),
             },
             ...config,
+        });
+    });
+};
+
+const initResetForms = () => {
+    const forms = document.querySelectorAll('form');
+    if (!forms.length) return;
+
+    forms.forEach((form) => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            form.reset();
         });
     });
 };
@@ -153,4 +165,5 @@ document.addEventListener('DOMContentLoaded', () => {
         gap: 80,
     });
     initSimpleSlider();
+    initResetForms();
 });
