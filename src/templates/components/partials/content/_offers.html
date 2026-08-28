@@ -1,13 +1,25 @@
 <section class="offers">
     <div class="container">
+        {{#if head}}
         <div class="section-head">
             <h2 class="section-title">Спеціальні пропозиції</h2>
             {{> _cta text = 'більше' arrow = true}}
         </div>
+        {{/if}}
+        {{#if shortList}}
+        <div class="offers__content">
+            {{#each (sliceCollect offers.data 0 3)}}
+                {{> _offerBox this}}
+            {{/each}}
+            <p class="empty-state" style="display: none;">Публікації відстутні</p>
+        </div>
+        {{else}}
         <div class="offers__content">
             {{#each offers.data}}
                 {{> _offerBox this}}
             {{/each}}
+            <p class="empty-state" style="display: none;">Публікації відстутні</p>
         </div>
+        {{/if}}
     </div>
 </section>

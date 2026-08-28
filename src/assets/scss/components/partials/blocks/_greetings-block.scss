@@ -11,4 +11,8 @@
         min-height: min(rem(692px), 100vh);
         min-height: min(rem(692px), 100svh);
     }
+
+    &:not(:has(.bg-layer)) {
+        background: $c_green;
+    }
 }

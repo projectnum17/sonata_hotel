@@ -8,6 +8,12 @@
     &__content {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        @include fluidRem(gap, 12px, 28px);
+        @include fluidRem(column-gap, 12px, 28px);
+        @include fluidRem(row-gap, 18px, 50px);
+    }
+
+    .empty-state {
+        grid-column: span 3;
+        text-align: center;
     }
 }
