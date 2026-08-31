@@ -5,6 +5,7 @@
 .room-details {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     @include fluidRem(gap, 6px, 31px);
 
     li {

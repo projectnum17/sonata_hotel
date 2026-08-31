@@ -7,6 +7,9 @@
     padding-top: var(--section_gap);
     .section-title {
         margin-bottom: var(--section_gap);
+        @include media('mobile') {
+            margin-bottom: rem(30px);
+        }
     }
 
     &__bg {

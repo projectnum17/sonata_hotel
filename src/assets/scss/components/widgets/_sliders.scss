@@ -116,8 +116,8 @@ section:has(.swiper) {
     &__slide {
         width: auto;
         width: min(90%, rem(845px));
-        height: min(rem(564px), 85vh);
-        height: min(rem(564px), 85svh);
+        max-height: min(rem(564px), 85vh);
+        max-height: min(rem(564px), 85svh);
     }
 
     &__pic {

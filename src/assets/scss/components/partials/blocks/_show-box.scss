@@ -7,11 +7,22 @@
     display: flex;
     align-items: flex-start;
     @include fluidRem(gap, 18px, 60px);
+    @include media('mobile') {
+        flex-direction: column;
+        padding-inline: var(--container_pdd);
+    }
 
     &__gallery {
         min-width: 0;
         width: 65%;
         position: relative;
+        @include media('laptop') {
+            width: 50%;
+        }
+        @include media('mobile') {
+            width: 100%;
+        }
+
         &::after {
             content: '';
             z-index: 1;
@@ -43,6 +54,10 @@
         aspect-ratio: 1221 / 740;
         height: min(rem(740px), 90vh);
         height: min(rem(740px), 90svh);
+        @include media('laptop') {
+            height: min(rem(450px), 90vh);
+            height: min(rem(450px), 90svh);
+        }
 
         * {
             width: 100%;
@@ -61,6 +76,13 @@
             var(--container_pdd),
             calc((100% - #{$container_wdth}) / 2 + var(--container_pdd))
         );
+        @include media('laptop') {
+            width: 50%;
+        }
+        @include media('mobile') {
+            width: 100%;
+            padding: 0;
+        }
     }
 
     &__details {

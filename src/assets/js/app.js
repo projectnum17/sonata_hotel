@@ -105,7 +105,19 @@ const simpleSlidersConfigs = {
     },
     'js-gallery-slider': {
         slidesPerView: 'auto',
-        spaceBetween: 30,
+        breakpoints: {
+            0: {
+                spaceBetween: 12,
+            },
+
+            768: {
+                spaceBetween: 20,
+            },
+
+            1200: {
+                spaceBetween: 30,
+            },
+        },
     },
 };
 
