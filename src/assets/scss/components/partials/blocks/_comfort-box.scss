@@ -15,6 +15,18 @@
             }
         }
     }
+
+    @include media('mobile') {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .empty-state {
+        grid-column: span 3;
+        text-align: center;
+        @include media('mobile') {
+            grid-column: span 1;
+        }
+    }
 }
 
 .comfort-box {
@@ -33,6 +45,10 @@
         backdrop-filter: blur(7px);
         background: #f5ece033;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     @include hover {
@@ -44,15 +60,42 @@
         }
     }
 
+    @include media('mobile') {
+        &.is-active {
+            &::after {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .comfort-box__preview img {
+                transform: scale(1.15);
+            }
+
+            .comfort-box__info {
+                transform: translate(0);
+            }
+        }
+    }
+
     &__details {
         overflow: hidden;
         position: relative;
+        @include media('mobile') {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: rem(20px);
+        }
     }
 
     &__preview {
         aspect-ratio: 555 / 674;
         overflow: hidden;
         background: #d9d9d9;
+        @include media('mobile') {
+            aspect-ratio: 340 / 300;
+            height: min(rem(300px), 85vh);
+            height: min(rem(300px), 85svh);
+        }
 
         * {
             width: 100%;
@@ -73,11 +116,19 @@
         @include fluidRem(padding, 12px, 20px);
         background: $c_light;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            top: auto;
+            bottom: 0;
+            transform: translateY(100%);
+        }
     }
 
     &__title {
         @include fluidRem(font-size, 20px, 35px);
         font-family: $ff_sec;
         @include fluidRem(padding-top, 5px, 34px);
+        @include media('mobile') {
+            padding-top: 0;
+        }
     }
 }

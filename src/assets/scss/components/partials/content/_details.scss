@@ -7,6 +7,10 @@
     padding-block: calc(var(--section_gap) + rem(72px))
         calc(var(--section_gap) + rem(72px));
     position: relative;
+    @include media('mobile') {
+        padding-block: calc(var(--section_gap) + rem(20px))
+            calc(var(--section_gap) + rem(50px));
+    }
 
     .container {
         display: flex;

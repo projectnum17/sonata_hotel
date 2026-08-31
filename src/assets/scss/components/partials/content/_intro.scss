@@ -19,6 +19,14 @@
         }
     }
 
+    .cta {
+        @include media('mobile') {
+            width: auto;
+            min-width: rem(235px);
+            justify-content: center;
+        }
+    }
+
     .container {
         width: 100%;
         display: flex;
@@ -75,6 +83,17 @@
         align-items: center;
         justify-content: space-between;
         @include fluidRem(gap, 20px, 50px);
+        @include media('mobile') {
+            flex-direction: column;
+
+            &:first-child {
+                align-items: flex-start;
+            }
+
+            &:last-child {
+                align-items: flex-end;
+            }
+        }
 
         li {
             display: flex;
@@ -85,6 +104,9 @@
                 width: rem(36px);
                 aspect-ratio: 1;
                 object-fit: contain;
+                @include media('mobile') {
+                    width: rem(25px);
+                }
             }
         }
     }

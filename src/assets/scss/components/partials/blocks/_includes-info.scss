@@ -6,8 +6,11 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    @include fluidRem(gap, 43px, 112px);
+    @include fluidRem(gap, 34px, 112px);
     padding-block: var(--section_gap);
+    @include media('mobile') {
+        flex-direction: column;
+    }
 
     &__list {
         max-width: rem(1325px);
@@ -19,6 +22,12 @@
         @include fluidRem(row-gap, 20px, 40px);
         @include fluidRem(column-gap, 20px, 80px);
         color: #000;
+        @include media('tablet') {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        @include media('mobile') {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
 
         &--sm {
             max-width: rem(1120px);

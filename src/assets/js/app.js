@@ -149,6 +149,31 @@ const initResetForms = () => {
     });
 };
 
+const initMobileObserver = () => {
+    if (window.innerWidth > 767) return;
+
+    const targets = document.querySelectorAll('.js-toggle-observe');
+
+    if (!targets.length) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                entry.target.classList.toggle(
+                    'is-active',
+                    entry.isIntersecting,
+                );
+            });
+        },
+        {
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+        },
+    );
+
+    targets.forEach((target) => observer.observe(target));
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
     initFAQ();
@@ -206,4 +231,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     initSimpleSlider();
     initResetForms();
+    initMobileObserver();
 });
