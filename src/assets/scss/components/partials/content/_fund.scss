@@ -9,9 +9,20 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         @include fluidRem(row-gap, 40px, 100px);
         @include fluidRem(column-gap, 12px, 48px);
+        @include media('tablet') {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        @include media('mobile') {
+            .room-box {
+                max-width: 100%;
+            }
+        }
     }
 
     .empty-state {
         grid-column: span 2;
+        @include media('tablet') {
+            grid-column: span 1;
+        }
     }
 }

@@ -125,6 +125,9 @@
             display: flex;
             justify-content: center;
             @include fluidRem(gap, 10px, 24px);
+            @include media('mobile') {
+                flex-direction: column;
+            }
         }
     }
 
