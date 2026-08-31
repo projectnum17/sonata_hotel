@@ -8,6 +8,9 @@
     width: 100%;
     background: $c_green;
     color: $c_white;
+    @include media('mobile') {
+        padding-bottom: (var(--panel_h));
+    }
 
     .container {
         padding: 0;

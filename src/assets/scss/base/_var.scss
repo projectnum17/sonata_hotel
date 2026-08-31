@@ -40,6 +40,7 @@ $gradient_accent: linear-gradient(
     @include fluidRem(--section_gap, 50px, 100px);
     --container_pdd: #{rem(80px)};
     --header_h: #{rem(150px)};
+    --panel_h: #{rem(71px)};
 }
 
 @media (max-width: 1700.98px) {
