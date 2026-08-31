@@ -17,6 +17,9 @@
         display: flex;
         flex-direction: column;
         gap: rem(24px);
+        @include media('mobile') {
+            max-width: 100%;
+        }
     }
 
     &__info {
@@ -36,18 +39,29 @@
             @include fluidRem(border-bottom-width, 12px, 17px);
             border-bottom-style: solid;
             border-bottom-color: #566439;
+            .container {
+                @include media('desktop-lg') {
+                    flex-direction: column;
+                }
+            }
         }
 
         .container {
             display: flex;
             justify-content: space-between;
             @include fluidRem(gap, 30px, 78px);
+            @include media('mobile') {
+                flex-direction: column;
+            }
         }
     }
 
     &__details {
         max-width: rem(1140px);
         width: 100%;
+        @include media('desktop-lg') {
+            max-width: 100%;
+        }
     }
 
     &__connect {
@@ -55,6 +69,9 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         @include fluidRem(row-gap, 30px, 80px);
         @include fluidRem(column-gap, 30px, 94px);
+        @include media('mobile') {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
     }
 
     &__box {
@@ -65,6 +82,9 @@
 
         &:last-child {
             margin-top: rem(-60px);
+            @include media('mobile') {
+                margin-top: 0;
+            }
         }
     }
 
@@ -92,8 +112,8 @@
 
         a {
             display: inline-flex;
-            width: rem(58px);
-            height: rem(58px);
+            @include fluidRem(width, 48px, 58px);
+            aspect-ratio: 1;
             @include transitions(
                 0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
