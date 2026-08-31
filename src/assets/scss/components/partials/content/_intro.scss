@@ -116,6 +116,9 @@
     display: flex;
     align-items: center;
     gap: rem(14px);
+    @include media('mobile') {
+        flex-direction: column;
+    }
     a {
         @include fluidRem(font-size, 24px, 26px);
         font-weight: 600;
@@ -134,6 +137,9 @@
     align-items: center;
     justify-content: center;
     @include fluidRem(gap, 12px, 38px);
+    @include media('mobile') {
+        display: none;
+    }
 
     li {
         &:not(:last-child) {

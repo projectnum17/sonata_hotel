@@ -9,12 +9,20 @@
     padding-block: var(--section_gap);
     min-height: min(100vh, 70vh);
     min-height: min(100svh, 70svh);
+    @include media('mobile') {
+        min-height: 80vh;
+        min-height: 80svh;
+    }
 
     .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         @include fluidRem(gap, 20px, 88px);
+        @include media('mobile') {
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     .section-title {
@@ -52,5 +60,8 @@
     .site-text {
         text-align: left;
         color: #584738cc;
+        @include media('mobile') {
+            margin-bottom: rem(10px);
+        }
     }
 }

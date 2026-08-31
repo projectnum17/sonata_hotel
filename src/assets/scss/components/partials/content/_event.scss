@@ -5,10 +5,23 @@
 .event {
     display: flex;
     justify-content: space-between;
-    @include fluidRem(gap, 24px, 88px);
+    @include fluidRem(gap, 27px, 88px);
+    @include media('mobile') {
+        flex-direction: column;
+
+        &:has(.event__gallery) {
+            .event__preview {
+                display: none;
+            }
+        }
+    }
 
     &--reverse {
         flex-direction: row-reverse;
+        @include media('mobile') {
+            flex-direction: column;
+            gap: 0;
+        }
         .event__info {
             padding-right: 0;
             padding-left: max(
@@ -26,17 +39,48 @@
         &--lg {
             width: 55%;
             aspect-ratio: 1164 / 955;
+            @include media('mobile') {
+                width: 100%;
+                aspect-ratio: 376 / 250;
+            }
         }
 
         &--sm {
             margin-top: auto;
             aspect-ratio: 588 / 414;
+            @include media('mobile') {
+                aspect-ratio: 340 / 220;
+            }
         }
 
         * {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    }
+
+    &__gallery {
+        display: none;
+        @include media('mobile') {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: rem(19px);
+        }
+
+        &-pic {
+            * {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &--lg {
+                aspect-ratio: 203 / 220;
+            }
+            &--sm {
+                aspect-ratio: 154 / 152;
+            }
         }
     }
 
@@ -48,6 +92,10 @@
             var(--container_pdd),
             calc((100% - #{$container_wdth}) / 2 + var(--container_pdd))
         );
+        @include media('mobile') {
+            width: 100%;
+            padding-inline: var(--container_pdd);
+        }
     }
 
     &__txts {

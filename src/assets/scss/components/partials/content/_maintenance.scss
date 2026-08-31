@@ -27,6 +27,9 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
         @include fluidRem(column-gap, 24px, 167px);
         @include fluidRem(row-gap, 85px, 100px);
+        @include media('mobile') {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
 
         li {
             @include fluidRem(font-size, 12px, 18px);
@@ -35,6 +38,10 @@
             align-items: center;
             text-align: center;
             @include fluidRem(gap, 20px, 30px);
+
+            * {
+                margin: 0;
+            }
 
             h3 {
                 font-family: $ff_sec;

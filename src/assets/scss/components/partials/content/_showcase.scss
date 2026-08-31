@@ -7,6 +7,9 @@
     display: flex;
     align-items: center;
     @include fluidRem(gap, 14px, 80px);
+    @include media('mobile') {
+        flex-direction: column;
+    }
 
     &__pic {
         overflow: hidden;
@@ -15,6 +18,13 @@
         max-height: min(rem(905px), 90vh);
         max-height: min(rem(905px), 90svh);
         background: #d9d9d9;
+        @include media('mobile') {
+            height: min(rem(244px), 90vh);
+            height: min(rem(244px), 90svh);
+            max-height: none;
+            width: 100%;
+            aspect-ratio: 376 / 244;
+        }
 
         * {
             width: 100%;
@@ -32,6 +42,12 @@
         width: 35%;
         @include fluidRem(font-size, 16px, 22px);
         color: #584738cc;
+
+        @include media('mobile') {
+            width: 100%;
+            padding-inline: var(--container_pdd);
+            padding-block: 0 rem(24px);
+        }
 
         h2,
         h3 {
