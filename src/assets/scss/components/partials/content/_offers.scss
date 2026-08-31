@@ -51,5 +51,8 @@
     .empty-state {
         grid-column: span 3;
         text-align: center;
+        @include media('mobile') {
+            grid-column: span 1;
+        }
     }
 }

@@ -10,6 +10,10 @@
     &--sm {
         min-height: min(rem(692px), 100vh);
         min-height: min(rem(692px), 100svh);
+        @include media('mobile') {
+            min-height: min(rem(596px), 100vh);
+            min-height: min(rem(596px), 100svh);
+        }
     }
 
     &:not(:has(.bg-layer)) {

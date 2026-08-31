@@ -40,6 +40,10 @@
             transform: translateY(-25%);
             top: 0;
             z-index: 1;
+            @include media('mobile') {
+                width: rem(1440px);
+                transform: translate(-15%, -10%);
+            }
 
             &--l {
                 transform: translate(-50%, -50%);
