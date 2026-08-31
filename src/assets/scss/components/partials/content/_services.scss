@@ -8,6 +8,11 @@ body {
             top: rem(20px);
             height: min(rem(880px), calc(100vh - rem(50px)));
             height: min(rem(880px), calc(100svh - rem(50px)));
+            @include media('mobile') {
+                top: auto;
+                height: min(rem(380px), 100vh);
+                height: min(rem(380px), 100svh);
+            }
         }
     }
 }
@@ -18,12 +23,36 @@ body {
     .container {
         display: flex;
         justify-content: space-between;
+        @include media('mobile') {
+            flex-direction: column-reverse;
+        }
     }
 
     &__sticky {
         width: 50%;
         position: relative;
         padding-block: calc(var(--section_gap) / 2);
+        @include media('mobile') {
+            padding-block: 0;
+            width: 100%;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: linear-gradient(
+                    123.03deg,
+                    rgba(94, 62, 27, 0.5) 41.31%,
+                    rgba(237, 204, 133, 0.5) 59.8%,
+                    rgba(129, 85, 17, 0.5) 79.84%,
+                    rgba(237, 204, 133, 0.5) 105.27%,
+                    rgba(84, 64, 19, 0.5) 121.45%
+                );
+            }
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -50,6 +79,11 @@ body {
         display: flex;
         flex-direction: column;
         @include fluidRem(gap, 40px, 80px);
+        @include media('mobile') {
+            width: 100%;
+            padding-block: rem(30px);
+            padding-inline: rem(12px);
+        }
 
         &::after,
         &::before {
@@ -94,12 +128,19 @@ body {
             display: flex;
             align-items: center;
             gap: rem(10px);
+            @include media('mobile') {
+                gap: rem(12px);
+            }
         }
 
         img {
             object-fit: contain;
             width: rem(90px);
             height: rem(67px);
+            @include media('mobile') {
+                width: rem(45px);
+                height: rem(33px);
+            }
         }
     }
 
@@ -113,6 +154,14 @@ body {
         height: min(rem(880px), calc(100vh - rem(120px)));
         height: min(rem(880px), calc(100svh - rem(120px)));
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            position: inherit;
+            top: auto;
+            padding-inline: rem(1px);
+            aspect-ratio: 340 / 380;
+            height: min(rem(380px), 100vh);
+            height: min(rem(380px), 100svh);
+        }
 
         & > img,
         & > video {
@@ -126,6 +175,9 @@ body {
             left: 50%;
             transform: translateX(-50%);
             @include fluidRem(bottom, 24px, 50px);
+            @include media('mobile') {
+                display: none;
+            }
         }
     }
 }
