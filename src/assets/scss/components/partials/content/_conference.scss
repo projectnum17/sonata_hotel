@@ -16,6 +16,12 @@
         @include fluidRem(gap, 24px, 40px);
         @include fluidRem(margin-bottom, 56px, 103px);
     }
+
+    .cta {
+        min-width: rem(166px);
+        justify-content: center;
+    }
+
     .bg-branch {
         &--r {
             top: 0;

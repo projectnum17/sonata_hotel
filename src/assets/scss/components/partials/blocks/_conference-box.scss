@@ -5,7 +5,7 @@
 .conference-box {
     display: flex;
     flex-direction: column;
-    @include fluidRem(gap, 18px, 40px);
+    @include fluidRem(gap, 14px, 40px);
     color: $c_light;
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
@@ -17,6 +17,11 @@
         height: min(rem(726px), 80svh);
         background: #d9d9d9;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            aspect-ratio: 316 / 368;
+            height: min(rem(368px), 80vh);
+            height: min(rem(368px), 80svh);
+        }
 
         &::after {
             content: '';

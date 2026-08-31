@@ -1,0 +1,14 @@
+@use 'mixins' as *;
+@use 'media' as *;
+@use 'var' as *;
+
+.mobile--hidden {
+    display: none !important;
+}
+
+.mobile--visible {
+    display: none !important;
+    @include media('mobile') {
+        display: flex !important;
+    }
+}

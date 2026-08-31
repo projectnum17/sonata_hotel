@@ -3,7 +3,7 @@
 @use '../../base/media' as *;
 
 .lines-pagination {
-    @include fluidRem(padding-top, 24px, 40px);
+    @include fluidRem(padding-top, 20px, 40px);
     display: flex;
     align-items: center;
     @include fluidRem(gap, 12px, 23px);
@@ -23,7 +23,7 @@
     &__btns {
         display: flex;
         align-items: center;
-        gap: rem(8px);
+        gap: rem(10px);
         &:has(.swiper-button-lock) {
             display: none;
         }
@@ -74,8 +74,8 @@
 }
 
 .control-btn {
-    @include fluidRem(width, 40px, 50px);
-    @include fluidRem(height, 40px, 50px);
+    @include fluidRem(width, 30px, 50px);
+    @include fluidRem(height, 30px, 50px);
     display: inline-flex;
     align-items: center;
     justify-content: center;

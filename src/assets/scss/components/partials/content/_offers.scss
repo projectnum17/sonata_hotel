@@ -5,11 +5,47 @@
 .offers {
     padding-block: var(--section_gap);
 
+    &:has(.offers__content--scrolling) {
+        @include media('mobile') {
+            .container {
+                padding: 0;
+            }
+
+            .section-head {
+                padding-inline: var(--container_pdd);
+            }
+        }
+    }
+
     &__content {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        @include fluidRem(column-gap, 12px, 28px);
+        @include fluidRem(column-gap, 18px, 28px);
         @include fluidRem(row-gap, 18px, 50px);
+        @include media('mobile') {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        &--scrolling {
+            @include media('mobile') {
+                padding-inline: var(--container_pdd);
+                display: flex;
+                overflow-x: auto;
+                overflow-y: hidden;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                scroll-snap-type: x mandatory;
+
+                .offer-box {
+                    max-width: rem(316px);
+                    flex-shrink: 0;
+                    scroll-snap-align: center;
+                }
+            }
+        }
     }
 
     .empty-state {

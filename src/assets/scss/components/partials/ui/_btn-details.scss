@@ -53,7 +53,7 @@ a.btn-details {
     text-transform: uppercase;
     gap: rem(10px);
     @include fluidRem(padding-block, 10px, 20px);
-    @include fluidRem(padding-inline, 18px, 27px);
+    @include fluidRem(padding-inline, 11px, 27px);
     border-bottom: 1px solid #58473880;
     color: $c_dark;
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));

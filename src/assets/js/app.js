@@ -42,7 +42,7 @@ const initFAQ = () => {
     });
 };
 
-const initCenteredSliders = ({ selector, gap }) => {
+const initCenteredSliders = ({ selector, breakpoints }) => {
     if (typeof Swiper === 'undefined') return;
 
     const sliderBlocks = document.querySelectorAll(`.js-${selector}-slider`);
@@ -63,9 +63,9 @@ const initCenteredSliders = ({ selector, gap }) => {
         const swiperConfig = {
             speed: 900,
             grabCursor: true,
-            centeredSlides: shouldCenter,
-            spaceBetween: gap,
             slidesPerView: 'auto',
+            centeredSlides: window.innerWidth >= 768 && shouldCenter,
+            breakpoints,
         };
 
         if (btnPrev || btnNext) {
@@ -154,15 +154,55 @@ document.addEventListener('DOMContentLoaded', () => {
     initFAQ();
     initCenteredSliders({
         selector: 'atmosphere',
-        gap: 50,
+        breakpoints: {
+            0: {
+                spaceBetween: 18,
+            },
+
+            768: {
+                spaceBetween: 20,
+            },
+
+            1200: {
+                spaceBetween: 50,
+            },
+        },
     });
     initCenteredSliders({
         selector: 'conference',
-        gap: 50,
+        breakpoints: {
+            0: {
+                spaceBetween: 18,
+            },
+
+            768: {
+                spaceBetween: 20,
+            },
+
+            1200: {
+                spaceBetween: 50,
+            },
+        },
     });
     initCenteredSliders({
         selector: 'rooms',
         gap: 80,
+        breakpoints: {
+            0: {
+                spaceBetween: 12,
+            },
+
+            768: {
+                spaceBetween: 20,
+            },
+
+            1200: {
+                spaceBetween: 40,
+            },
+            1441: {
+                spaceBetween: 80,
+            },
+        },
     });
     initSimpleSlider();
     initResetForms();

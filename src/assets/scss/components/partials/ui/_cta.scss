@@ -6,7 +6,7 @@
     min-height: rem(54px);
     align-items: center;
     position: relative;
-    @include fluidRem(font-size, 14px, 18px);
+    @include fluidRem(font-size, 16px, 18px);
     text-transform: uppercase;
     @include fluidRem(padding-block, 11px, 14px);
     @include fluidRem(padding-inline, 18px, 29px);
@@ -20,6 +20,11 @@
 
     @include hover {
         background-position: 100% 50%;
+    }
+
+    @include media('mobile') {
+        width: 100%;
+        justify-content: center;
     }
 
     &:has(svg) {

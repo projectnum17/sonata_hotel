@@ -1,9 +1,16 @@
 <header class="header {{#if headerBlur}} header--blur{{/if}} js-header">
     <div class="container">
-        <a href="index.html" class="header__logo">
-            <img src="./assets/images/icons/logo_hor_w.svg" alt="Logotype">
-            <img src="./assets/images/icons/logo_hor_d.svg" alt="Logotype">
-        </a>
+        <div class="header__controls">
+            <button type="button" class="header__burger js-menu-trigger">
+                {{#count 3}}
+                <span></span>
+                {{/count}}
+            </button>
+            <a href="index.html" class="header__logo">
+                <img src="./assets/images/icons/logo_hor_w.svg" alt="Logotype">
+                <img src="./assets/images/icons/logo_hor_d.svg" alt="Logotype">
+            </a>
+        </div>
         <nav class="header__nav">
             <ul class="header__menu">
                 {{#each menuInfo.header}}

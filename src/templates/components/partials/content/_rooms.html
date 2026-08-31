@@ -2,8 +2,29 @@
     <div class="container">
         <div class="rooms__head">
             <h2 class="section-title">Номери</h2>
-            {{> _btnDetails tagWrapper = 'a'}}
+            <a href="javascript: void(0)" class="btn-details mobile--hidden">
+                <span>Детальніше</span>
+                <div class="btn-details__arrow">
+                    <svg>
+                        <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                    </svg>
+                    <svg>
+                        <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                    </svg>
+                </div>
+            </a>
         </div>
         {{> _roomsSlider linesPagination = true}}
+        <a href="javascript: void(0)" class="btn-details mobile--vidible">
+            <span>Детальніше</span>
+            <div class="btn-details__arrow">
+                <svg>
+                    <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                </svg>
+                <svg>
+                    <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                </svg>
+            </div>
+        </a>
     </div>
 </section>

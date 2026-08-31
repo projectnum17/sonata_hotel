@@ -48,9 +48,16 @@ $gradient_accent: linear-gradient(
     }
 }
 
+@include media('desktop-lg') {
+    :root {
+        --header_h: #{rem(120px)};
+    }
+}
+
 @include media('tablet') {
     :root {
         --container_pdd: #{rem(24px)};
+        --header_h: #{rem(100px)};
     }
 }
 

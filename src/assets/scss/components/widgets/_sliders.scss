@@ -12,10 +12,13 @@ section:has(.swiper) {
     }
 
     &__slide {
-        width: auto;
         width: min(90%, rem(1355px));
         height: min(rem(765px), 85vh);
         height: min(rem(765px), 85svh);
+        @include media('mobile') {
+            height: min(rem(230px), 85vh);
+            height: min(rem(230px), 85svh);
+        }
     }
 
     &__pic {
@@ -24,6 +27,9 @@ section:has(.swiper) {
         aspect-ratio: 1355 / 765;
         overflow: hidden;
         background: #d9d9d9;
+        @include media('mobile') {
+            aspect-ratio: 316 / 230;
+        }
 
         * {
             width: 100%;
@@ -42,12 +48,14 @@ section:has(.swiper) {
     }
 
     &__slide {
-        width: auto;
         width: min(90%, var(--slide-ratio));
 
         .conference-box {
             transform: scale(0.8);
             transform-origin: top;
+            @include media('mobile') {
+                transform: scale(1);
+            }
         }
 
         &.swiper-slide-active {
@@ -61,14 +69,24 @@ section:has(.swiper) {
         position: absolute;
         z-index: 3;
         top: 40%;
+        @include media('mobile') {
+            display: none;
+        }
+
         &:first-of-type {
             left: calc(50% - (var(--slide-ratio) / 2) - rem(55px));
             transform: translate(-50%, -50%) rotate(180deg);
+            @include media('tablet') {
+                left: calc(50% - (var(--slide-ratio) / 2) - rem(20px));
+            }
         }
 
         &:last-of-type {
             right: calc(50% - (var(--slide-ratio) / 2) - rem(55px));
             transform: translate(50%, -50%);
+            @include media('tablet') {
+                right: calc(50% - (var(--slide-ratio) / 2) - rem(20px));
+            }
         }
     }
 }
@@ -79,8 +97,16 @@ section:has(.swiper) {
     }
 
     &__slide {
-        width: auto;
         width: min(100%, rem(976px));
+        @include media('mobile') {
+            width: auto;
+        }
+    }
+
+    .lines-pagination {
+        @include media('mobile') {
+            display: none;
+        }
     }
 }
 

@@ -6,6 +6,10 @@
     position: relative;
     padding-block: calc(var(--section_gap) + rem(80px))
         calc(var(--section_gap) + rem(40px));
+    @include media('tablet') {
+        padding-block: calc(var(--section_gap) + rem(30px))
+            calc(var(--section_gap) + rem(50px));
+    }
 
     .section-subtitle {
         @include fluidRem(margin-bottom, 63px, 80px);

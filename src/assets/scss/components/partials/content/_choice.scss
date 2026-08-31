@@ -5,5 +5,8 @@
 .choice {
     &__collect {
         display: flex;
+        @include media('mobile') {
+            flex-direction: column;
+        }
     }
 }

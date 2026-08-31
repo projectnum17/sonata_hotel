@@ -3,8 +3,16 @@
 @use '../../base/media' as *;
 
 .footer {
+    max-width: rem(2560.98px);
+    margin: 0 auto;
+    width: 100%;
     background: $c_green;
     color: $c_white;
+
+    .container {
+        padding: 0;
+        max-width: 100%;
+    }
 
     a {
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
@@ -18,15 +26,33 @@
     &__menu {
         @include fluidRem(padding-top, 32px, 64px);
         @include fluidRem(padding-bottom, 32px, 50px);
+        @include media('mobile') {
+            padding: 0;
+        }
     }
 
     &__title {
         @include fluidRem(font-size, 12px, 18px);
         opacity: 0.5;
+        @include media('mobile') {
+            margin-bottom: rem(14px);
+        }
     }
 
     &__menu {
+        justify-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: right;
+        padding-left: rem(12px);
+        padding-right: var(--container_pdd);
         color: #ffffffcc;
+
+        @include media('mobile') {
+            display: none;
+        }
+
         li {
             display: inline-flex;
             justify-content: flex-end;
@@ -37,14 +63,21 @@
 
         a {
             font: inherit;
-            min-height: rem(60px)
+            min-height: rem(60px);
+        }
+    }
+
+    &__copy {
+        padding-left: var(--container_pdd);
+        @include media('mobile') {
+            padding-left: 0;
         }
     }
 
     &__connects {
         display: flex;
         flex-direction: column;
-        @include fluidRem(gap, 12px, 21px);
+        @include fluidRem(gap, 10px, 21px);
     }
 
     &__info {
@@ -56,6 +89,9 @@
         min-height: rem(60px);
         display: inline-flex;
         align-items: center;
+        @include media('mobile') {
+            min-height: rem(45px);
+        }
     }
 
     &__preview {
@@ -65,17 +101,27 @@
         justify-content: center;
         border-right: 1px solid #ffffff33;
         border-left: 1px solid #ffffff33;
+        @include media('mobile') {
+            border: none;
+            padding: 0;
+        }
     }
 
     &__details {
+        padding-left: var(--container_pdd);
         display: flex;
         flex-direction: column;
         padding-right: rem(12px);
         @include fluidRem(gap, 32px, 100px);
+        @include media('mobile') {
+            padding: 0;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__logo {
-        max-width: rem(385px);
+        @include fluidRem(max-width, 265px, 385px);
         width: 100%;
         img {
             width: 100%;
@@ -83,33 +129,96 @@
         }
     }
 
-    &__menu {
-        justify-self: flex-end;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: right;
-        padding-left: rem(12px);
+    &__location {
+        .footer__info {
+            @include media('mobile') {
+                font-size: rem(16px);
+            }
+        }
     }
 
     &__top {
+        @include media('mobile') {
+            padding-block: rem(42px) rem(20px);
+            @include media('mobile') {
+                position: relative;
+                overflow: hidden;
+
+                &::after,
+                &::before {
+                    content: '';
+                    top: 50%;
+                    transform: translateY(-50%);
+                    position: absolute;
+                    height: 100%;
+                    width: 1px;
+                    background: #ffffff33;
+                }
+
+                &::after {
+                    right: var(--container_pdd);
+                }
+
+                &::before {
+                    left: var(--container_pdd);
+                }
+            }
+        }
         .container {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
+            @include media('mobile') {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: rem(41px);
+                padding-inline: calc(var(--container_pdd) + rem(5px));
+            }
         }
     }
 
     &__bot {
-        @include fluidRem(font-size, 12px, 14px);
+        @include fluidRem(font-size, 14px, 14px);
         text-transform: uppercase;
-        @include fluidRem(padding-block, 20px, 38px);
+        @include fluidRem(padding-block, 24px, 38px);
         border-top: 1px solid #ffffff33;
         color: #ffffff80;
+
+        @include media('mobile') {
+            position: relative;
+            overflow: hidden;
+
+            &::after,
+            &::before {
+                content: '';
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                height: 100%;
+                width: 1px;
+                background: #ffffff33;
+            }
+
+            &::after {
+                right: var(--container_pdd);
+            }
+
+            &::before {
+                left: var(--container_pdd);
+            }
+        }
 
         .container {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: rem(12px);
+            @include media('mobile') {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: rem(31px);
+                padding-inline: calc(var(--container_pdd) + rem(5px));
+            }
         }
     }
 
@@ -120,7 +229,12 @@
         flex-wrap: wrap;
         gap: rem(5px);
         justify-self: center;
+        @include media('mobile') {
+            flex-direction: column;
+        }
+
         a {
+            text-align: center;
             text-decoration: underline;
             &:not(:last-child) {
                 display: inline-flex;
@@ -134,6 +248,9 @@
                     flex-shrink: 0;
                     border-radius: 50%;
                     background: #ffffff80;
+                    @include media('mobile') {
+                        display: none;
+                    }
                 }
             }
         }
@@ -141,5 +258,9 @@
 
     &__by {
         justify-self: flex-end;
+        padding-right: var(--container_pdd);
+        @include media('mobile') {
+            padding-right: 0;
+        }
     }
 }

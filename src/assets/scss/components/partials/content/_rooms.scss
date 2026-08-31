@@ -4,11 +4,30 @@
 
 .rooms {
     padding-block: var(--section_gap);
+    .container {
+        @include media('mobile') {
+            display: flex;
+            flex-direction: column;
+            gap: rem(31px);
+        }
+    }
+
+    .btn-details {
+        @include media('mobile') {
+            width: 100%;
+            justify-content: center;
+            padding-block: rem(18px);
+        }
+    }
+
     &__head {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: rem(24px);
-        @include fluidRem(margin-bottom, 24px, 100px);
+        @include fluidRem(margin-bottom, 31px, 100px);
+        @include media('mobile') {
+            margin-bottom: 0;
+        }
     }
 }

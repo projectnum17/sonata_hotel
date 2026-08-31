@@ -21,6 +21,17 @@
     @media (max-width: 1540.98px) {
         font-size: rem(14px);
     }
+    @media (max-width: 1457.98px) {
+        font-size: rem(12px);
+    }
+
+    @include media('desktop-lg') {
+        padding-block: rem(30px);
+    }
+
+    @include media('mobile') {
+        padding-block: rem(8px);
+    }
 
     &--blur {
         background: #00000030;
@@ -38,6 +49,10 @@
         padding-block: rem(18px);
         border-color: $c_dark;
 
+        @include media('mobile') {
+            padding-block: rem(5px);
+        }
+
         .header__logo img {
             &:last-child {
                 opacity: 1;
@@ -46,6 +61,17 @@
             &:first-child {
                 opacity: 0;
             }
+        }
+
+        .header__burger span {
+            background: $c_dark;
+        }
+    }
+
+    .cta {
+        @include media('mobile') {
+            min-height: rem(41px);
+            font-size: rem(14px);
         }
     }
 
@@ -60,6 +86,9 @@
     &__calls {
         position: relative;
         cursor: pointer;
+        @include media('tablet') {
+            display: none;
+        }
 
         @include hover {
             .header__calls-collect {
@@ -138,6 +167,11 @@
     &__lang {
         cursor: pointer;
         position: relative;
+
+        @include media('tablet') {
+            display: none;
+        }
+
         @include hover {
             .header__lang-inner {
                 opacity: 1;
@@ -234,6 +268,9 @@
             max-width: auto;
             width: auto;
         }
+        @include media('desktop-lg') {
+            display: none;
+        }
     }
 
     &__menu {
@@ -257,6 +294,11 @@
         width: rem(217px);
         height: rem(43px);
         position: relative;
+        @include media('desktop-lg') {
+            width: rem(125px);
+            height: rem(25px);
+        }
+
         img {
             object-fit: contain;
             position: absolute;
@@ -269,6 +311,47 @@
 
             &:last-child {
                 opacity: 0;
+            }
+        }
+    }
+
+    &__controls {
+        @include media('desktop-lg') {
+            display: flex;
+            align-items: center;
+            gap: rem(24px);
+        }
+    }
+
+    &__burger {
+        display: none;
+        @include media('desktop-lg') {
+            display: inline-flex;
+            width: rem(30px);
+            height: rem(18px);
+            position: relative;
+
+            span {
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background: $c_light;
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+                &:first-child {
+                    top: 0;
+                }
+
+                &:nth-child(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &:last-child {
+                    bottom: 0;
+                }
             }
         }
     }

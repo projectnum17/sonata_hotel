@@ -7,7 +7,7 @@
         </div>
         {{/if}}
         {{#if shortList}}
-        <div class="offers__content">
+        <div class="offers__content offers__content--scrolling">
             {{#each (sliceCollect offers.data 0 3)}}
                 {{> _offerBox this}}
             {{/each}}
