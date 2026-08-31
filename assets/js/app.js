@@ -42,7 +42,7 @@ const initFAQ = () => {
     });
 };
 
-const initCenteredSliders = ({ selector, gap }) => {
+const initCenteredSliders = ({ selector, breakpoints }) => {
     if (typeof Swiper === 'undefined') return;
 
     const sliderBlocks = document.querySelectorAll(`.js-${selector}-slider`);
@@ -63,9 +63,9 @@ const initCenteredSliders = ({ selector, gap }) => {
         const swiperConfig = {
             speed: 900,
             grabCursor: true,
-            centeredSlides: shouldCenter,
-            spaceBetween: gap,
             slidesPerView: 'auto',
+            centeredSlides: window.innerWidth >= 768 && shouldCenter,
+            breakpoints,
         };
 
         if (btnPrev || btnNext) {
@@ -98,19 +98,150 @@ const initCenteredSliders = ({ selector, gap }) => {
     });
 };
 
+const simpleSlidersConfigs = {
+    'js-preview-slider': {
+        slidesPerView: 1,
+        spaceBetween: 0,
+    },
+    'js-gallery-slider': {
+        slidesPerView: 'auto',
+        breakpoints: {
+            0: {
+                spaceBetween: 12,
+            },
+
+            768: {
+                spaceBetween: 20,
+            },
+
+            1200: {
+                spaceBetween: 30,
+            },
+        },
+    },
+};
+
+const initSimpleSlider = () => {
+    if (typeof Swiper === 'undefined') return;
+
+    const sliderBlocks = document.querySelectorAll('.js-simple-slider');
+    if (!sliderBlocks.length) return;
+
+    sliderBlocks.forEach((block) => {
+        const sliderEl = block.querySelector('.swiper');
+        if (!sliderEl) return;
+
+        const configClass = Object.keys(simpleSlidersConfigs).find(
+            (className) => block.classList.contains(className),
+        );
+
+        const config = configClass ? simpleSlidersConfigs[configClass] : {};
+
+        new Swiper(sliderEl, {
+            speed: 900,
+            grabCursor: true,
+            navigation: {
+                prevEl: block.querySelector('.js-control-prev'),
+                nextEl: block.querySelector('.js-control-next'),
+            },
+            ...config,
+        });
+    });
+};
+
+const initResetForms = () => {
+    const forms = document.querySelectorAll('form');
+    if (!forms.length) return;
+
+    forms.forEach((form) => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            form.reset();
+        });
+    });
+};
+
+const initMobileObserver = () => {
+    if (window.innerWidth > 767) return;
+
+    const targets = document.querySelectorAll('.js-toggle-observe');
+
+    if (!targets.length) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                entry.target.classList.toggle(
+                    'is-active',
+                    entry.isIntersecting,
+                );
+            });
+        },
+        {
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0,
+        },
+    );
+
+    targets.forEach((target) => observer.observe(target));
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
     initFAQ();
     initCenteredSliders({
         selector: 'atmosphere',
-        gap: 50,
+        breakpoints: {
+            0: {
+                spaceBetween: 18,
+            },
+
+            768: {
+                spaceBetween: 20,
+            },
+
+            1200: {
+                spaceBetween: 50,
+            },
+        },
     });
     initCenteredSliders({
         selector: 'conference',
-        gap: 50,
+        breakpoints: {
+            0: {
+                spaceBetween: 18,
+            },
+
+            768: {
+                spaceBetween: 20,
+            },
+
+            1200: {
+                spaceBetween: 50,
+            },
+        },
     });
     initCenteredSliders({
         selector: 'rooms',
         gap: 80,
+        breakpoints: {
+            0: {
+                spaceBetween: 12,
+            },
+
+            768: {
+                spaceBetween: 20,
+            },
+
+            1200: {
+                spaceBetween: 40,
+            },
+            1441: {
+                spaceBetween: 80,
+            },
+        },
     });
+    initSimpleSlider();
+    initResetForms();
+    initMobileObserver();
 });
