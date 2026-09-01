@@ -19,6 +19,43 @@ const initHeader = () => {
 
     window.addEventListener('scroll', handleScroll);
     handleScroll();
+
+    const initAsideMenu = () => {
+        if (window.innerWidth > 1440) return;
+
+        const menuTrigger = document.querySelector('.js-menu-trigger');
+        const menuBox = document.querySelector('.js-aside-menu');
+
+        if (!menuTrigger || !menuBox) return;
+
+        const openState = () => {
+            document.body.classList.add('is-locked');
+            menuBox.classList.add('is-show');
+            menuTrigger.classList.add('is-active');
+        };
+
+        const closeState = () => {
+            document.body.classList.remove('is-locked');
+            menuBox.classList.remove('is-show');
+            menuTrigger.classList.remove('is-active');
+        };
+
+        menuTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            menuBox.classList.contains('is-show') ? closeState() : openState();
+        });
+
+        menuBox.addEventListener('click', (e) => {
+            if (e.target === menuBox) closeState();
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) closeState();
+        });
+    };
+
+    initAsideMenu();
 };
 
 const initFAQ = () => {
