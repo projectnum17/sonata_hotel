@@ -2,6 +2,22 @@
 @use '../../base/mixins' as *;
 @use '../../base/media' as *;
 
+body:has(.aside-menu.is-show) {
+    @include media('mobile') {
+        .header .cta {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20%);
+        }
+
+        .lang-list {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%);
+        }
+    }
+}
+
 .header {
     height: var(--header_h);
     position: fixed;
@@ -65,6 +81,18 @@
 
         .header__burger span {
             background: $c_dark;
+        }
+
+        .lang-list {
+            a {
+                color: $c_dark;
+                opacity: 0.6;
+
+                &.is-active {
+                    color: $c_dark;
+                    opacity: 1;
+                }
+            }
         }
     }
 
@@ -250,6 +278,9 @@
             width: auto;
             gap: rem(12px);
         }
+        @include media('tablet') {
+            position: relative;
+        }
 
         svg {
             width: rem(14px);
@@ -294,7 +325,7 @@
         width: rem(217px);
         height: rem(43px);
         position: relative;
-        @include media('desktop-lg') {
+        @include media('mobile') {
             width: rem(125px);
             height: rem(25px);
         }
@@ -353,6 +384,56 @@
                     bottom: 0;
                 }
             }
+
+            &.is-active {
+                span {
+                    &:first-child {
+                        transform: rotate(45deg);
+                        top: rem(8px);
+                    }
+
+                    &:nth-child(2) {
+                        width: 0;
+                    }
+
+                    &:last-child {
+                        transform: rotate(-45deg);
+                        bottom: rem(8px);
+                    }
+                }
+            }
+        }
+    }
+
+    .lang-list {
+        display: none;
+        @include media('tablet') {
+            display: flex;
+            gap: rem(20px);
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+
+            a {
+                color: #f5ece080;
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+                &.is-active {
+                    color: $c_light;
+                }
+            }
+        }
+
+        @include media('mobile') {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(50%);
         }
     }
 }
