@@ -1956,6 +1956,20 @@ body:has(.header.is-transform) .services__preview {
   color: #f5ece0;
 }
 
+.room-box__preview::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: clamp(1.0625rem, 1.1274934952vw + 0.521317216rem, 1.875rem);
+  padding: 0.125rem;
+  border-radius: inherit;
+  background: linear-gradient(123.03deg, #ffebd5 11.01%, #edcc85 29.5%, #ffebd5 49.54%, #edcc85 74.97%, #ffebd5 91.15%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 .room-box__preview > img {
   width: 100%;
   height: 100%;
@@ -1970,20 +1984,7 @@ body:has(.header.is-transform) .services__preview {
   flex-direction: column;
   justify-content: flex-end;
   position: absolute;
-  inset: clamp(1.0625rem, 1.1274934952vw + 0.521317216rem, 1.875rem);
-}
-
-.room-box__content::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 0.125rem;
-  border-radius: inherit;
-  background: linear-gradient(123.03deg, #ffebd5 11.01%, #edcc85 29.5%, #ffebd5 49.54%, #edcc85 74.97%, #ffebd5 91.15%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
+  inset: clamp(1.0625rem, 1.300954033vw + 0.4380583261rem, 2rem);
 }
 
 .room-box__details {
