@@ -5,9 +5,6 @@
 a:has(.btn-details) {
     @include hover {
         .btn-details {
-            border-radius: rem(50px);
-            color: #000000;
-            background: #f5ece0cc;
 
             &__arrow {
                 svg {
@@ -27,9 +24,6 @@ a:has(.btn-details) {
 
 a.btn-details {
     @include hover {
-        border-radius: rem(50px);
-        color: #000000;
-        background: #f5ece0cc;
 
         .btn-details__arrow {
             svg {
@@ -47,14 +41,15 @@ a.btn-details {
 }
 
 .btn-details {
-    @include fluidRem(font-size, 16px, 20px);
+    @include fluidRem(font-size, 16px, 18px);
     display: inline-flex;
     align-items: center;
     text-transform: uppercase;
     gap: rem(10px);
-    @include fluidRem(padding-block, 10px, 20px);
-    @include fluidRem(padding-inline, 11px, 27px);
-    border-bottom: 1px solid #58473880;
+    @include fluidRem(padding-block, 10px, 25px);
+    @include fluidRem(padding-inline, 11px, 30px);
+    border-radius: 999px;
+    background: #e9ddcd;
     color: $c_dark;
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 

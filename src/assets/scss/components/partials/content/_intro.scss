@@ -79,6 +79,17 @@
         @include fluidRem(gap, 40px, 50px);
         flex: 1;
     }
+
+    &__headings {
+        display: flex;
+        flex-direction: column;
+        @include fluidRem(gap, 13px, 30px);
+    }
+
+    .site-text {
+        max-width: rem(716px);
+        margin: 0 auto;
+    }
 }
 
 .room-info {
@@ -134,7 +145,6 @@
         @include fluidRem(font-size, 24px, 26px);
         font-weight: 600;
         text-transform: uppercase;
-        text-decoration: underline;
     }
 }
 

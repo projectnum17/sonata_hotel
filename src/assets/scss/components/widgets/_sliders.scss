@@ -12,9 +12,9 @@ section:has(.swiper) {
     }
 
     &__slide {
-        width: min(90%, rem(1355px));
-        height: min(rem(765px), 85vh);
-        height: min(rem(765px), 85svh);
+        width: min(90%, rem(1024px));
+        height: min(rem(578px), 85vh);
+        height: min(rem(578px), 85svh);
         @include media('mobile') {
             height: min(rem(230px), 85vh);
             height: min(rem(230px), 85svh);

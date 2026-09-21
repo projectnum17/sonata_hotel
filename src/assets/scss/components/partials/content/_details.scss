@@ -21,6 +21,7 @@
     &__txts {
         max-width: rem(1035px);
         margin: 0 auto;
+        line-height: 140%;
         @include fluidRem(font-size, 16px, 22px);
         display: flex;
         flex-direction: column;
@@ -76,7 +77,9 @@
         @include fluidRem(margin-top, 41px, 51px);
         justify-content: center;
         align-items: center;
-        min-width: rem(235px);
         min-height: rem(60px);
+        @include media('mobile') {
+            min-height: rem(55px);
+        }
     }
 }

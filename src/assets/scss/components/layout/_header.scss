@@ -28,10 +28,10 @@ body:has(.aside-menu.is-show) {
     z-index: 10;
     padding-block: rem(48px);
     font-size: rem(16px);
-    font-family: $ff_sec;
+    font-family: $ff_base;
     text-transform: uppercase;
     color: $c_light;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #f5ece033;
     background: transparent;
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     @media (max-width: 1540.98px) {
@@ -97,6 +97,7 @@ body:has(.aside-menu.is-show) {
     }
 
     .cta {
+        min-height: rem(53px);
         @include media('mobile') {
             min-height: rem(41px);
             font-size: rem(14px);
@@ -269,10 +270,10 @@ body:has(.aside-menu.is-show) {
     &__panel {
         display: flex;
         align-items: center;
-        max-width: rem(471px);
+        max-width: rem(450px);
         width: 100%;
-        justify-content: space-between;
-        gap: rem(5px);
+        justify-content: flex-end;
+        gap: rem(35px);
         @media (max-width: 1540.98px) {
             max-width: auto;
             width: auto;
@@ -293,7 +294,7 @@ body:has(.aside-menu.is-show) {
     }
 
     &__nav {
-        max-width: rem(938px);
+        max-width: rem(846px);
         width: 100%;
         @media (max-width: 1540.98px) {
             max-width: auto;

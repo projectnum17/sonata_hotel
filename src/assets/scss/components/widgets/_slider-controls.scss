@@ -74,8 +74,9 @@
 }
 
 .control-btn {
-    @include fluidRem(width, 30px, 50px);
-    @include fluidRem(height, 30px, 50px);
+    @include fluidRem(width, 30px, 72px);
+    @include fluidRem(height, 30px, 72px);
+    border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;

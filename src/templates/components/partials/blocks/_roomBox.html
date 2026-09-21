@@ -24,7 +24,7 @@
 {{/if}}
 
 {{#if brickBox}}
-<div class="room-box room-box--brick">
+<a href="#!" class="room-box">
     <div class="room-box__preview">
         <img src="{{ picture }}" alt="">
         <div class="room-box__content">
@@ -40,11 +40,5 @@
             </div>
         </div>
     </div>
-    <div class="room-box__foot">
-        <a href="javascript: void(0)" class="cta cta--transparent cta--accent">
-            <span>детальніше про номер</span>
-        </a>
-        {{> _cta text = 'Забронювати' arrow = true}}
-    </div>
-</div>
+</a>
 {{/if}}

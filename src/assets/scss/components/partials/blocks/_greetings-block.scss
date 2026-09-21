@@ -16,6 +16,15 @@
         }
     }
 
+    &--md {
+        min-height: min(rem(787px), 100vh);
+        min-height: min(rem(787px), 100svh);
+        @include media('mobile') {
+            min-height: min(rem(596px), 100vh);
+            min-height: min(rem(596px), 100svh);
+        }
+    }
+
     &:not(:has(.bg-layer)) {
         background: $c_green;
     }

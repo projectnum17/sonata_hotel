@@ -8,6 +8,8 @@
     justify-content: space-between;
     @include fluidRem(gap, 34px, 112px);
     padding-block: var(--section_gap);
+    padding-inline: var(--container_pdd);
+    background: #eee5d9;
     @include media('mobile') {
         flex-direction: column;
     }

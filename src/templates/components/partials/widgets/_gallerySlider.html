@@ -2,19 +2,27 @@
     <div class="gallery-slider__show swiper">
         <div class="gallery-slider__wrapper swiper-wrapper">
             {{#each slides}}
-                <div class="gallery-slider__slide swiper-slide">
-                    <div class="gallery-slider__pic">
-                        <img loading="lazy" decoding="async" src="{{ picture }}" alt="Picture">
-                    </div>
+            <div class="gallery-slider__slide swiper-slide">
+                <div class="gallery-slider__pic">
+                    <img loading="lazy" decoding="async" src="{{ picture }}" alt="Picture">
                 </div>
+            </div>
             {{/each}}
         </div>
     </div>
-    <div class="navigation-box">
-        <button type="button" class="control-btn control-btn--milk control-btn--circle js-control-next">
-            <svg>
-                <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
-            </svg>
-        </button>
+    <div class="lines-pagination">
+        <div class="lines-pagination__track js-pagination is-progress"></div>
+        <div class="lines-pagination__btns">
+            <button type="button" class="control-btn control-btn--brown control-btn--box js-control-prev">
+                <svg>
+                    <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                </svg>
+            </button>
+            <button type="button" class="control-btn control-btn--brown control-btn--box js-control-next">
+                <svg>
+                    <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                </svg>
+            </button>
+        </div>
     </div>
 </div>

@@ -13,8 +13,13 @@
 }
 
 .section-subheading {
+    text-transform: uppercase;
     @include fluidRem(font-size, 50px, 150px);
     font-family: $ff_sec;
+
+    &--sm {
+        @include fluidRem(font-size, 40px, 100px);
+    }
 }
 
 .section-heading {
@@ -46,6 +51,11 @@
     text-align: center;
     gap: rem(24px);
 
+    &--accent {
+        font-family: $ff_sec;
+        line-height: 120%;
+    }
+
     &--md {
         @include fluidRem(font-size, 18px, 22px);
     }
@@ -68,4 +78,8 @@
     font-family: $ff_sec;
     text-transform: uppercase;
     text-align: center;
+}
+
+.transparent {
+    opacity: 0.7;
 }

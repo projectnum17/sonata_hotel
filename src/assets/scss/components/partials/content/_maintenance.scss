@@ -5,8 +5,8 @@
 .maintenance {
     &__preview {
         width: 100%;
-        height: min(rem(1297px), 100vh);
-        height: min(rem(1297px), 100svh);
+        height: min(rem(1297px), 120vh);
+        height: min(rem(1297px), 120svh);
         background: #d9d9d9;
 
         * {

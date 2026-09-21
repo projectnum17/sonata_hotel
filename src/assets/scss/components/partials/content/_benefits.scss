@@ -3,7 +3,6 @@
 @use '../../../base/media' as *;
 
 .benefits {
-    padding-block: var(--section_gap);
     background: $c_green;
     color: $c_light;
     @include media('mobile') {
@@ -22,28 +21,34 @@
                 content: '';
                 position: absolute;
                 height: 1px;
-                width: 45%;
+                width: 40%;
                 top: 0;
-                background: linear-gradient(
-                    123.03deg,
-                    rgba(94, 62, 27, 0.5) 11.01%,
-                    rgba(237, 204, 133, 0.5) 29.5%,
-                    rgba(129, 85, 17, 0.5) 49.54%,
-                    rgba(237, 204, 133, 0.5) 74.97%,
-                    rgba(84, 64, 19, 0.5) 91.15%
-                );
+                background:
+                    linear-gradient(
+                        0deg,
+                        transparent 0,
+
+                        transparent calc(50% - 1px),
+                        rgba(129, 85, 17, 0.6) 50%,
+
+                        rgba(237, 204, 133, 0.65) calc(50% + 1px),
+                        transparent calc(50% + 2px),
+                        transparent 100%
+                    ),
+                    #3b4228;
             }
 
             &::after {
-                right: 0;
+                right: rem(20px);
             }
             &::before {
-                left: 0;
+                left: rem(20px);
             }
         }
     }
 
     &__item {
+        padding-block: var(--section_gap);
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -65,55 +70,38 @@
         &:nth-child(odd) {
             &::after {
                 display: block;
-                height: 90%;
+                height: 100%;
                 top: 50%;
                 transform: translateY(-50%);
+                @include media('tablet') {
+                    height: 80%;
+                }
             }
         }
 
         &::after {
             content: '';
             position: absolute;
-            height: rem(250px);
+            height: 100%;
             width: 1px;
             right: 0;
             top: 0;
-            background: linear-gradient(
-                123.03deg,
-                rgba(94, 62, 27, 0.5) 11.01%,
-                rgba(237, 204, 133, 0.5) 29.5%,
-                rgba(129, 85, 17, 0.5) 49.54%,
-                rgba(237, 204, 133, 0.5) 74.97%,
-                rgba(84, 64, 19, 0.5) 91.15%
-            );
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent 0,
+                    transparent calc(50% - 1px),
+                    rgba(129, 85, 17, 0.6) 50%,
+                    rgba(237, 204, 133, 0.65) calc(50% + 1px),
+                    transparent calc(50% + 2px),
+                    transparent 100%
+                ),
+                #3b4228;
         }
 
-        &:first-child {
-            &::before {
-                content: '';
-                position: absolute;
-                height: rem(250px);
-                width: 1px;
-                left: 0;
-                top: 0;
-                background: linear-gradient(
-                    123.03deg,
-                    rgba(94, 62, 27, 0.5) 11.01%,
-                    rgba(237, 204, 133, 0.5) 29.5%,
-                    rgba(129, 85, 17, 0.5) 49.54%,
-                    rgba(237, 204, 133, 0.5) 74.97%,
-                    rgba(84, 64, 19, 0.5) 91.15%
-                );
-
-                @include media('tablet') {
-                    display: block;
-                    top: auto;
-                    bottom: 0;
-                    height: 1px;
-                    width: 80%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
+        &:last-child {
+            &::after {
+                display: none;
             }
         }
 
@@ -121,14 +109,19 @@
             @include media('tablet') {
                 content: '';
                 position: absolute;
-                background: linear-gradient(
-                    123.03deg,
-                    rgba(94, 62, 27, 0.5) 11.01%,
-                    rgba(237, 204, 133, 0.5) 29.5%,
-                    rgba(129, 85, 17, 0.5) 49.54%,
-                    rgba(237, 204, 133, 0.5) 74.97%,
-                    rgba(84, 64, 19, 0.5) 91.15%
-                );
+                background:
+                    linear-gradient(
+                        0deg,
+                        transparent 0,
+
+                        transparent calc(50% - 1px),
+                        rgba(129, 85, 17, 0.6) 50%,
+
+                        rgba(237, 204, 133, 0.65) calc(50% + 1px),
+                        transparent calc(50% + 2px),
+                        transparent 100%
+                    ),
+                    #3b4228;
                 display: block;
                 bottom: 0;
                 left: 50%;
@@ -160,6 +153,7 @@
 
     &__info {
         margin-top: auto;
-        @include fluidRem(font-size, 13px, 20px);
+        @include fluidRem(font-size, 13px, 18px);
+        color: #f5ece0e0;
     }
 }

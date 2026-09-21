@@ -16,17 +16,20 @@
         flex-direction: column;
     }
 
+    .site-text {
+        @include fluidRem(margin-bottom, 11px, 20px);
+    }
+
     &__title {
-        @include fluidRem(font-size, 80px, 226px);
+        @include fluidRem(font-size, 80px, 180px);
         font-family: $ff_sec;
         text-transform: uppercase;
     }
 
     &__subtitle {
-        @include fluidRem(font-size, 29px, 80px);
+        @include fluidRem(font-size, 20px, 40px);
         font-family: $ff_sec;
         text-transform: uppercase;
-        @include fluidRem(margin-bottom, 30px, 36px);
     }
 
     &__content {

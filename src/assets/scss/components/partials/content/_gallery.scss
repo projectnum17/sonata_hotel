@@ -3,6 +3,7 @@
 @use '../../../base/media' as *;
 
 .gallery {
+    @include fluidRem(padding-top, 60px, 120px);
     .section-title {
         @include fluidRem(margin-bottom, 30px, 80px);
     }

@@ -96,46 +96,40 @@
         margin-bottom: rem(20px);
         position: relative;
         @include fluidRem(font-size, 16px, 20px);
-        font-size: 20px;
         text-transform: uppercase;
         display: flex;
         align-items: center;
-        @include fluidRem(gap, 4px, 8px);
+        @include fluidRem(gap, 6px, 8px);
+        border-radius: 999px;
         @include fluidRem(padding-block, 12px, 16px);
+        @include fluidRem(padding-inline, 22px, 30px);
+        background: #e9ddcd;
+        color: #584738;
         @include media('mobile') {
             margin: 0;
-            padding-inline: rem(22px);
         }
-
-        &::after,
-        &::before {
+        &::after {
             content: '';
             position: absolute;
-            width: 0;
-            height: rem(1px);
-            background: #ffffff80;
+            inset: rem(0px);
+            padding: rem(2px);
+            border-radius: inherit;
+            background: $gradient_gold;
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
             @include transitions(
-                0.5s,
+                0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
-            @include media('mobile') {
-                width: 100%;
-            }
-        }
-
-        &::after {
-            top: 0;
-            left: 0;
-        }
-
-        &::before {
-            bottom: 0;
-            right: 0;
         }
 
         svg {
             width: rem(16px);
-            height: rem(14px);
+            height: rem(16px);
         }
     }
 }
