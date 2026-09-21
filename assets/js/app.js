@@ -181,6 +181,10 @@ const initSimpleSlider = () => {
                 prevEl: block.querySelector('.js-control-prev'),
                 nextEl: block.querySelector('.js-control-next'),
             },
+            pagination: {
+                el: block.querySelector('.js-pagination'),
+                type: 'progressbar',
+            },
             ...config,
         });
     });

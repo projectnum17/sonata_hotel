@@ -32,7 +32,7 @@
                 <nav class="header__nav">
                     <ul class="header__menu">
                         <li>
-                            <a href="javascript: void(0)">Про готель</a>
+                            <a href="javascript: void(0)">Про Нас</a>
                         </li>
                         <li>
                             <a href="javascript: void(0)">Номери</a>
@@ -44,7 +44,7 @@
                             <a href="javascript: void(0)">Конференц сервіс</a>
                         </li>
                         <li>
-                            <a href="javascript: void(0)">Спеціальні пропозиції</a>
+                            <a href="javascript: void(0)">Спец.пропозиції</a>
                         </li>
                         <li>
                             <a href="javascript: void(0)">Контакти</a>
@@ -84,7 +84,7 @@
                     </ul>
                     <div class="header__calls">
                         <div class="header__calls-preview">
-                            <p>Зателефонувати</p>
+                            <a href="tel:+380000000000">+38 (000) 000 00 00</a>
                             <svg>
                                 <use href="./assets/images/icons/svg/sprite.svg#icoDrop"></use>
                             </svg>
@@ -106,12 +106,13 @@
             <section class="intro greetings-block">
                 <div class="container">
                     <div class="intro__preview">
-                        <h1 class="section-subheading">Конференц сервіс</h1>
-                        <div class="site-text">
+                        <div class="site-text site-text--accent">
                             <p>
-                                Комфортний відпочинок у Львові для бізнесу та подорожей
+                                Сучасні зали для ділових зустрічей,
+                                <br> конференцій і подій будь-якого формату.
                             </p>
                         </div>
+                        <h1 class="section-subheading">Конференц сервіс</h1>
                         <a href="javascript: void(0)" class="cta">
                             <span>забронювати</span>
                         </a>
@@ -209,36 +210,34 @@
                         <img src="./assets/images/branch-sm.svg" alt="">
                     </div>
                 </div>
-                <div class="container">
-                    <div class="includes-info">
-                        <h3 class="section-label">Обладнання</h3>
-                        <ul class="includes-info__list includes-info__list--sm">
-                            <li>
-                                <img loading="lazy" decoding="async" src="./assets/images/icons/incl_8.png" alt="Icon">
-                                <p>Проєктор та проекційний екран</p>
-                            </li>
-                            <li>
-                                <img loading="lazy" decoding="async" src="./assets/images/icons/incl_9.png" alt="Icon">
-                                <p>професійна звукова система</p>
-                            </li>
-                            <li>
-                                <img loading="lazy" decoding="async" src="./assets/images/icons/incl_10.png" alt="Icon">
-                                <p>Ноутбук для презентацій</p>
-                            </li>
-                            <li>
-                                <img loading="lazy" decoding="async" src="./assets/images/icons/incl_11.png" alt="Icon">
-                                <p>Фліпчарт та маркери</p>
-                            </li>
-                            <li>
-                                <img loading="lazy" decoding="async" src="./assets/images/icons/incl_12.png" alt="Icon">
-                                <p>Лазерна указка</p>
-                            </li>
-                            <li>
-                                <img loading="lazy" decoding="async" src="./assets/images/icons/incl_13.png" alt="Icon">
-                                <p>Бездротовий мікрофон</p>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="includes-info">
+                    <h3 class="section-label">Обладнання</h3>
+                    <ul class="includes-info__list includes-info__list--sm">
+                        <li>
+                            <img loading="lazy" decoding="async" src="./assets/images/icons/incl_8.png" alt="Icon">
+                            <p>Проєктор та проекційний екран</p>
+                        </li>
+                        <li>
+                            <img loading="lazy" decoding="async" src="./assets/images/icons/incl_9.png" alt="Icon">
+                            <p>професійна звукова система</p>
+                        </li>
+                        <li>
+                            <img loading="lazy" decoding="async" src="./assets/images/icons/incl_10.png" alt="Icon">
+                            <p>Ноутбук для презентацій</p>
+                        </li>
+                        <li>
+                            <img loading="lazy" decoding="async" src="./assets/images/icons/incl_11.png" alt="Icon">
+                            <p>Фліпчарт та маркери</p>
+                        </li>
+                        <li>
+                            <img loading="lazy" decoding="async" src="./assets/images/icons/incl_12.png" alt="Icon">
+                            <p>Лазерна указка</p>
+                        </li>
+                        <li>
+                            <img loading="lazy" decoding="async" src="./assets/images/icons/incl_13.png" alt="Icon">
+                            <p>Бездротовий мікрофон</p>
+                        </li>
+                    </ul>
                 </div>
                 <div class="preview__bg">
                     <img src="./assets/images/branch-sm.svg" alt="">
@@ -267,12 +266,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="navigation-box">
-                            <button type="button" class="control-btn control-btn--milk control-btn--circle js-control-next">
-                                <svg>
-                                    <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
-                                </svg>
-                            </button>
+                        <div class="lines-pagination">
+                            <div class="lines-pagination__track js-pagination is-progress"></div>
+                            <div class="lines-pagination__btns">
+                                <button type="button" class="control-btn control-btn--brown control-btn--box js-control-prev">
+                                    <svg>
+                                        <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="control-btn control-btn--brown control-btn--box js-control-next">
+                                    <svg>
+                                        <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -425,12 +432,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="navigation-box">
-                            <button type="button" class="control-btn control-btn--milk control-btn--circle js-control-next">
-                                <svg>
-                                    <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
-                                </svg>
-                            </button>
+                        <div class="lines-pagination">
+                            <div class="lines-pagination__track js-pagination is-progress"></div>
+                            <div class="lines-pagination__btns">
+                                <button type="button" class="control-btn control-btn--brown control-btn--box js-control-prev">
+                                    <svg>
+                                        <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="control-btn control-btn--brown control-btn--box js-control-next">
+                                    <svg>
+                                        <use href="./assets/images/icons/svg/sprite.svg#icoArrow-r"></use>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -445,36 +460,36 @@
                     </div>
                     <div class="comfort-collect">
                         <div class="comfort-box js-toggle-observe">
-                            <div class="comfort-box__details">
-                                <div class="comfort-box__preview">
-                                    <img loading="lazy" decoding="async" src="./assets/images/comf_1.jpg" alt="Picture">
-                                </div>
-                                <div class="comfort-box__info">
-                                    <p>Розпочинайте день без поспіху зі смачного сніданку, який уже входить у вартість вашого проживання</p>
-                                </div>
+                            <div class="comfort-box__preview">
+                                <img loading="lazy" decoding="async" src="./assets/images/comf_1.jpg" alt="Picture">
+                            </div>
+                            <div class="comfort-box__info">
                                 <h3 class="comfort-box__title">Сніданок</h3>
+                                <div>
+                                    <p>Розпочинайте день без поспіху зі смачного сніданку, який уже входить у вартість вашого проживання</p>
+                                </div>
                             </div>
                         </div>
                         <div class="comfort-box js-toggle-observe">
-                            <div class="comfort-box__details">
-                                <div class="comfort-box__preview">
-                                    <img loading="lazy" decoding="async" src="./assets/images/comf_2.jpg" alt="Picture">
-                                </div>
-                                <div class="comfort-box__info">
-                                    <p>Розпочинайте день без поспіху зі смачного сніданку, який уже входить у вартість вашого проживання</p>
-                                </div>
+                            <div class="comfort-box__preview">
+                                <img loading="lazy" decoding="async" src="./assets/images/comf_2.jpg" alt="Picture">
+                            </div>
+                            <div class="comfort-box__info">
                                 <h3 class="comfort-box__title">Комфортний сервіс</h3>
+                                <div>
+                                    <p>Розпочинайте день без поспіху зі смачного сніданку, який уже входить у вартість вашого проживання</p>
+                                </div>
                             </div>
                         </div>
                         <div class="comfort-box js-toggle-observe">
-                            <div class="comfort-box__details">
-                                <div class="comfort-box__preview">
-                                    <img loading="lazy" decoding="async" src="./assets/images/comf_3.jpg" alt="Picture">
-                                </div>
-                                <div class="comfort-box__info">
+                            <div class="comfort-box__preview">
+                                <img loading="lazy" decoding="async" src="./assets/images/comf_3.jpg" alt="Picture">
+                            </div>
+                            <div class="comfort-box__info">
+                                <h3 class="comfort-box__title">Без додаткових турбот</h3>
+                                <div>
                                     <p>Розпочинайте день без поспіху зі смачного сніданку, який уже входить у вартість вашого проживання</p>
                                 </div>
-                                <h3 class="comfort-box__title">Без додаткових турбот</h3>
                             </div>
                         </div>
                     </div>
@@ -861,7 +876,7 @@
             <div class="aside-menu__box">
                 <ul class="aside-menu__list">
                     <li>
-                        <a href="javascript: void(0)">Про готель</a>
+                        <a href="javascript: void(0)">Про Нас</a>
                     </li>
                     <li>
                         <a href="javascript: void(0)">Номери</a>
@@ -873,7 +888,7 @@
                         <a href="javascript: void(0)">Конференц сервіс</a>
                     </li>
                     <li>
-                        <a href="javascript: void(0)">Спеціальні пропозиції</a>
+                        <a href="javascript: void(0)">Спец.пропозиції</a>
                     </li>
                     <li>
                         <a href="javascript: void(0)">Контакти</a>
