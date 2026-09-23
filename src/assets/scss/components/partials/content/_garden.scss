@@ -11,8 +11,7 @@
     &__head {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: rem(14px);
+        @include fluidRem(gap, 14px, 80px);
         @include fluidRem(margin-bottom, 20px, 100px);
         @include media('mobile') {
             flex-direction: column;
@@ -20,14 +19,24 @@
             align-items: flex-start;
         }
     }
+    .section-title {
+        width: 62%;
+        @include media('mobile') {
+            width: 100%;
+        }
+    }
 
     &__txts {
+        width: 38%;
+        line-height: 130%;
         @include fluidRem(font-size, 16px, 22px);
-        max-width: min(100%, rem(588px));
         display: flex;
         flex-direction: column;
         gap: rem(24px);
         color: #584738cc;
+        @include media('mobile') {
+            width: 100%;
+        }
 
         * {
             margin: 0;
@@ -67,12 +76,12 @@
         }
 
         &--lg {
-            width: 60%;
+            width: 63%;
             aspect-ratio: 1172 / 783;
         }
 
         &--sm {
-            width: 40%;
+            width: 37%;
             aspect-ratio: 588 / 783;
         }
 

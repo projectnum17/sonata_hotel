@@ -29,7 +29,7 @@
     }
 
     &__title {
-        @include fluidRem(font-size, 20px, 40px);
+        @include fluidRem(font-size, 20px, 30px);
         &::before {
             content: counter(faqCount) '.';
             font: inherit;

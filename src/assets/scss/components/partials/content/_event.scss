@@ -5,7 +5,7 @@
 .event {
     display: flex;
     justify-content: space-between;
-    @include fluidRem(gap, 27px, 88px);
+    @include fluidRem(gap, 14px, 80px);
     @include media('mobile') {
         flex-direction: column;
 
@@ -37,7 +37,7 @@
         background: #d9d9d9;
 
         &--lg {
-            width: 55%;
+            width: 61%;
             aspect-ratio: 1164 / 955;
             @include media('mobile') {
                 width: 100%;
@@ -87,7 +87,7 @@
     &__info {
         display: flex;
         flex-direction: column;
-        width: 45%;
+        width: 39%;
         padding-right: max(
             var(--container_pdd),
             calc((100% - #{$container_wdth}) / 2 + var(--container_pdd))

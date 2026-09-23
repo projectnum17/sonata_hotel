@@ -4,4 +4,8 @@
 
 .menu {
     padding-block: var(--section_gap);
+
+    .section-head {
+        @include fluidRem(margin-bottom, 30px, 60px);
+    }
 }

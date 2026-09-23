@@ -20,7 +20,7 @@
     &__content {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        @include fluidRem(column-gap, 18px, 28px);
+        @include fluidRem(column-gap, 18px, 64px);
         @include fluidRem(row-gap, 18px, 50px);
         @include media('mobile') {
             grid-template-columns: repeat(1, minmax(0, 1fr));

@@ -96,7 +96,6 @@
     &__name {
         @include fluidRem(font-size, 18px, 30px);
         font-family: $ff_sec;
-        text-transform: uppercase;
     }
 
     &__list {

@@ -51,7 +51,7 @@ section:has(.swiper) {
         width: min(90%, var(--slide-ratio));
 
         .conference-box {
-            transform: scale(0.8);
+            transform: scale(0.7);
             transform-origin: top;
             @include media('mobile') {
                 transform: scale(1);
@@ -74,7 +74,7 @@ section:has(.swiper) {
         }
 
         &:first-of-type {
-            left: calc(50% - (var(--slide-ratio) / 2) - rem(55px));
+            left: calc(50% - (var(--slide-ratio) / 2) - rem(70px));
             transform: translate(-50%, -50%) rotate(180deg);
             @include media('tablet') {
                 left: calc(50% - (var(--slide-ratio) / 2) - rem(20px));
@@ -82,7 +82,7 @@ section:has(.swiper) {
         }
 
         &:last-of-type {
-            right: calc(50% - (var(--slide-ratio) / 2) - rem(55px));
+            right: calc(50% - (var(--slide-ratio) / 2) - rem(70px));
             transform: translate(50%, -50%);
             @include media('tablet') {
                 right: calc(50% - (var(--slide-ratio) / 2) - rem(20px));

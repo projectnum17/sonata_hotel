@@ -297,10 +297,9 @@ body:has(.aside-menu.is-show) {
         max-width: rem(846px);
         width: 100%;
         @media (max-width: 1540.98px) {
-            max-width: auto;
-            width: auto;
+            max-width: rem(600px);
         }
-        @include media('desktop-lg') {
+        @include media('desktop') {
             display: none;
         }
     }
@@ -326,6 +325,9 @@ body:has(.aside-menu.is-show) {
         width: rem(217px);
         height: rem(43px);
         position: relative;
+        @include media('desktop-lg') {
+            width: rem(170px);
+        }
         @include media('mobile') {
             width: rem(125px);
             height: rem(25px);
@@ -357,7 +359,7 @@ body:has(.aside-menu.is-show) {
 
     &__burger {
         display: none;
-        @include media('desktop-lg') {
+        @include media('desktop') {
             display: inline-flex;
             width: rem(30px);
             height: rem(18px);

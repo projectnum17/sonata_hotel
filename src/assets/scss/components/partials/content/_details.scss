@@ -32,11 +32,13 @@
             @include fluidRem(font-size, 30px, 90px);
             text-align: center;
             font-family: $ff_sec;
+            line-height: 100%;
         }
 
         h4,
         h5,
         h6 {
+            line-height: 100%;
             @include fluidRem(font-size, 20px, 50px);
             text-align: center;
             font-family: $ff_sec;

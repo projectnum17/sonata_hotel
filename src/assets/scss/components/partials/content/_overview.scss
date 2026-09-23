@@ -30,6 +30,7 @@
     }
 
     &__list {
+        font-family: $ff_sec;
         display: flex;
         flex-direction: column;
         @include fluidRem(gap, 20px, 30px);

@@ -11,6 +11,7 @@
     }
 
     .site-text {
+        line-height: 130%;
         max-width: rem(803px);
         @include fluidRem(margin-bottom, 41px, 51px);
     }

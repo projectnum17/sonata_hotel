@@ -22,7 +22,7 @@
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         @include fluidRem(row-gap, 20px, 40px);
-        @include fluidRem(column-gap, 20px, 80px);
+        @include fluidRem(column-gap, 20px, 12px);
         color: #000;
         @include media('tablet') {
             grid-template-columns: repeat(3, minmax(0, 1fr));

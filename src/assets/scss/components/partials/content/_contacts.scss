@@ -67,7 +67,7 @@
     &__connect {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        @include fluidRem(row-gap, 30px, 80px);
+        @include fluidRem(row-gap, 30px, 43px);
         @include fluidRem(column-gap, 30px, 94px);
         @include media('mobile') {
             grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -80,11 +80,8 @@
         align-items: flex-start;
         @include fluidRem(gap, 20px, 30px);
 
-        &:last-child {
-            margin-top: rem(-60px);
-            @include media('mobile') {
-                margin-top: 0;
-            }
+        .section-details {
+            text-transform: initial;
         }
     }
 
@@ -144,6 +141,7 @@
 
     &__description {
         display: flex;
+        line-height: 130%;
         flex-direction: column;
         @include fluidRem(gap, 10px, 30px);
         @include fluidRem(font-size, 16px, 24px);
@@ -155,12 +153,14 @@
         h2,
         h3,
         h4 {
+            line-height: 100%;
             font-family: $ff_sec;
             @include fluidRem(font-size, 24px, 60px);
         }
 
         h5,
         h6 {
+            line-height: 100%;
             font-family: $ff_sec;
             @include fluidRem(font-size, 20px, 48px);
         }

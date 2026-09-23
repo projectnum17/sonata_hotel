@@ -13,7 +13,7 @@
 
     &__pic {
         overflow: hidden;
-        width: 65%;
+        width: 60%;
         aspect-ratio: 1172 / 905;
         max-height: min(rem(905px), 90vh);
         max-height: min(rem(905px), 90svh);
@@ -34,12 +34,13 @@
     }
 
     &__info {
+        line-height: 130%;
         padding-block: rem(24px);
         padding-right: max(
             var(--container_pdd),
             calc((100% - #{$container_wdth}) / 2 + var(--container_pdd))
         );
-        width: 35%;
+        width: 40%;
         @include fluidRem(font-size, 16px, 22px);
         color: #584738cc;
 

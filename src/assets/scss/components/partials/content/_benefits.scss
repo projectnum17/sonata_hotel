@@ -152,6 +152,7 @@
     }
 
     &__info {
+        line-height: 130%;
         margin-top: auto;
         @include fluidRem(font-size, 13px, 18px);
         color: #f5ece0e0;

@@ -18,8 +18,6 @@ body {
 }
 
 .services {
-    padding-top: rem(16px);
-
     .container {
         display: flex;
         justify-content: space-between;
@@ -74,7 +72,7 @@ body {
     &__info {
         position: relative;
         width: 50%;
-        padding-block: var(--section_gap);
+        padding-block: rem(40px);
         padding-inline: rem(30px) rem(70px);
         display: flex;
         flex-direction: column;
