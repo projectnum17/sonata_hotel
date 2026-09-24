@@ -5,7 +5,7 @@
 .offer-box {
     display: flex;
     flex-direction: column;
-    @include fluidRem(font-size, 14px, 24px);
+    @include fluidRem(font-size, 16px, 24px);
     color: #584738cc;
     @include hover {
         .offer-box__pic * {
@@ -32,10 +32,6 @@
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
         }
-    }
-
-    &__title {
-        @include fluidRem(margin-bottom, 12px, 20px);
     }
 
     .btn-details {

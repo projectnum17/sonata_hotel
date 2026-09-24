@@ -57,6 +57,7 @@
             line-height: 107%;
             margin: 0;
             @include fluidRem(margin-bottom, 14px, 80px);
+            color: #584738;
         }
 
         h4,
@@ -67,6 +68,7 @@
             line-height: 107%;
             margin: 0;
             @include fluidRem(margin-bottom, 14px, 80px);
+            color: #584738;
         }
 
         a {

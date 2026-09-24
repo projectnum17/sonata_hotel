@@ -7,6 +7,19 @@
     display: flex;
     align-items: center;
     @include fluidRem(gap, 12px, 23px);
+    @include media('mobile') {
+        min-height: rem(40px);
+        padding-top: 0;
+        margin-top: rem(20px);
+        position: relative;
+
+        &:has(.lines-pagination__btns) {
+            .lines-pagination__track {
+                max-width: rem(84px);
+                margin: 0 auto;
+            }
+        }
+    }
 
     &__track {
         position: relative !important;
@@ -26,6 +39,14 @@
         gap: rem(10px);
         &:has(.swiper-button-lock) {
             display: none;
+        }
+
+        @include media('mobile') {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            justify-content: space-between;
         }
     }
 }
@@ -74,8 +95,8 @@
 }
 
 .control-btn {
-    @include fluidRem(width, 30px, 72px);
-    @include fluidRem(height, 30px, 72px);
+    @include fluidRem(width, 40px, 72px);
+    @include fluidRem(height, 40px, 72px);
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
