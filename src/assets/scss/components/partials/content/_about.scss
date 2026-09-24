@@ -7,6 +7,7 @@
     @include fluidRem(padding-block, 80px, 200px);
 
     .section-subtitle {
+        line-height: 130%;
         @include fluidRem(margin-bottom, 63px, 80px);
     }
 

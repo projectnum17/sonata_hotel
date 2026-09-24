@@ -21,20 +21,24 @@
     }
 
     .section-title {
-        max-width: rem(753px);
-        width: 100%;
+        width: 50%;
+        @include media('mobile') {
+            width: 100%;
+        }
     }
 
     .site-text {
+        width: 50%;
         text-align: left;
-        max-width: rem(866px);
-        width: 100%;
         font-weight: 300;
         color: #000;
+        @include media('mobile') {
+            width: 100%;
+        }
     }
 
     &__bg {
-        opacity: .1;
+        opacity: 0.1;
         z-index: -1;
         position: absolute;
         pointer-events: none;

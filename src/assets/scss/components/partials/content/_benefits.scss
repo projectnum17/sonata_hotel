@@ -23,19 +23,7 @@
                 height: 1px;
                 width: 40%;
                 top: 0;
-                background:
-                    linear-gradient(
-                        0deg,
-                        transparent 0,
-
-                        transparent calc(50% - 1px),
-                        rgba(129, 85, 17, 0.6) 50%,
-
-                        rgba(237, 204, 133, 0.65) calc(50% + 1px),
-                        transparent calc(50% + 2px),
-                        transparent 100%
-                    ),
-                    #3b4228;
+                background: linear-gradient(180deg, #857746 0%, #5d5127 100%);
             }
 
             &::after {
@@ -86,17 +74,7 @@
             width: 1px;
             right: 0;
             top: 0;
-            background:
-                linear-gradient(
-                    90deg,
-                    transparent 0,
-                    transparent calc(50% - 1px),
-                    rgba(129, 85, 17, 0.6) 50%,
-                    rgba(237, 204, 133, 0.65) calc(50% + 1px),
-                    transparent calc(50% + 2px),
-                    transparent 100%
-                ),
-                #3b4228;
+            background: linear-gradient(180deg, #857746 0%, #5d5127 100%);
         }
 
         &:last-child {
@@ -109,19 +87,7 @@
             @include media('tablet') {
                 content: '';
                 position: absolute;
-                background:
-                    linear-gradient(
-                        0deg,
-                        transparent 0,
-
-                        transparent calc(50% - 1px),
-                        rgba(129, 85, 17, 0.6) 50%,
-
-                        rgba(237, 204, 133, 0.65) calc(50% + 1px),
-                        transparent calc(50% + 2px),
-                        transparent 100%
-                    ),
-                    #3b4228;
+                background: linear-gradient(180deg, #857746 0%, #5d5127 100%);
                 display: block;
                 bottom: 0;
                 left: 50%;

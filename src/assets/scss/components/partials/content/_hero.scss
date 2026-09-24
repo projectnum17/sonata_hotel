@@ -18,6 +18,7 @@
 
     .site-text {
         @include fluidRem(margin-bottom, 11px, 20px);
+        font-family: $ff_sec;
     }
 
     &__title {

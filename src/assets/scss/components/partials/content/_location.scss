@@ -9,13 +9,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: rem(45px);
+        gap: rem(24px);
         @include media('tablet') {
             flex-direction: column;
         }
     }
 
     &__info {
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -34,6 +35,7 @@
     }
 
     &__map {
+        width: 50%;
         height: min(rem(659px), 95vh);
         height: min(rem(659px), 95svh);
         max-width: rem(872px);

@@ -101,9 +101,11 @@
     &__txts {
         @include fluidRem(margin-bottom, 26px, 87px);
         @include fluidRem(font-size, 16px, 22px);
+        line-height: 140%;
         color: #584738cc;
         h2,
         h3 {
+            line-height: 100%;
             @include fluidRem(font-size, 30px, 90px);
             font-family: $ff_sec;
             margin: 0;
@@ -114,6 +116,7 @@
         h4,
         h5,
         h6 {
+            line-height: 100%;
             @include fluidRem(font-size, 20px, 50px);
             font-family: $ff_sec;
             margin: 0;
