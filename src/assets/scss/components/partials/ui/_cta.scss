@@ -72,6 +72,12 @@
         }
     }
 
+    &--accent {
+        &::after {
+            inset: 0;
+        }
+    }
+
     &--transparent {
         background: #e9ddcd;
         color: #000;

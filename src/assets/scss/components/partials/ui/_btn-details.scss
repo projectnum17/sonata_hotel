@@ -5,7 +5,10 @@
 a:has(.btn-details) {
     @include hover {
         .btn-details {
-
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
             &__arrow {
                 svg {
                     &:first-child {
@@ -24,7 +27,10 @@ a:has(.btn-details) {
 
 a.btn-details {
     @include hover {
-
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
         .btn-details__arrow {
             svg {
                 &:first-child {
@@ -49,9 +55,27 @@ a.btn-details {
     @include fluidRem(padding-block, 10px, 25px);
     @include fluidRem(padding-inline, 11px, 30px);
     border-radius: 999px;
+    position: relative;
     background: #e9ddcd;
     color: $c_dark;
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    &::after {
+        content: '';
+        position: absolute;
+        inset: rem(0px);
+        padding: rem(1px);
+        border-radius: inherit;
+        background: $gradient_gold;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    }
 
     &__arrow {
         pointer-events: none;
